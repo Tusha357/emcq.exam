@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environmental Studies Online Exam</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="creator-credit">Created by Tushar</div>
+    
+    <div class="container" id="welcome-screen">
+        <div class="env-header">
+            <div class="env-stickers">
+                <div class="sticker" style="top: 10%; left: 5%;">🌍</div>
+                <div class="sticker" style="top: 15%; right: 8%;">🌱</div>
+            </div>
+            <div class="env-banner">
+                <img src="https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Environmental Banner">
+                <div class="banner-overlay">
+                    <h1>Environmental Studies Online Exam</h1>
+                    <div class="env-features">
+                        <div class="feature">
+                            <i class="fas fa-brain"></i>
+                            <span>Test Your Knowledge</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Track Progress</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-trophy"></i>
+                            <span>Compete Globally</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="welcome-form">
+            <input type="text" id="user-name" placeholder="Enter your name" required>
+            <button onclick="startQuiz()" class="btn">Start Quiz</button>
+            <button id="view-scores-btn" class="btn">View All Scores</button>
+        </div>
+    </div>
+
+    <div id="question-select-screen" class="container screen hidden">
+        <h2>Select Number of Questions</h2>
+        <div class="question-count-options">
+            <button onclick="startExam(10)">10 Questions</button>
+            <button onclick="startExam(20)">20 Questions</button>
+            <button onclick="startExam(40)">40 Questions</button>
+            <button onclick="startExam(70)">70 Questions</button>
+        </div>
+    </div>
+
+    <div id="scores-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>All Scores</h2>
+            <div class="score-tabs">
+                <button class="tab-btn active" data-questions="10">10 Q</button>
+                <button class="tab-btn" data-questions="20">20 Q</button>
+                <button class="tab-btn" data-questions="40">40 Q</button>
+                <button class="tab-btn" data-questions="70">70 Q</button>
+            </div>
+            <div id="all-scores" class="scores-list"></div>
+        </div>
+    </div>
+
+    <div class="container hidden" id="exam-screen">
+        <div class="timer" id="timer">Time: 00:00</div>
+        <div id="question-container">
+            <h3 id="question-text"></h3>
+            <div id="options-container"></div>
+        </div>
+        <button id="submit-exam" onclick="submitExam()" class="hidden">Submit Exam</button>
+    </div>
+
+    <div class="container hidden" id="results-screen">
+        <h2>Quiz Complete!</h2>
+        <div class="score-display">
+            <h3>Your Score: <span id="score">0</span>%</h3>
+        </div>
+        <button id="show-leaderboard" class="btn">View Top Scores</button>
+        <div id="leaderboard" class="hidden">
+            <h3>Top 5 Scores</h3>
+            <div id="top-scores" class="top-scores"></div>
+        </div>
+        <div class="result-buttons">
+            <button id="restart-btn" class="btn">Try Again</button>
+            <button id="home-btn" class="btn">Home</button>
+        </div>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
