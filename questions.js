@@ -837,7 +837,7 @@ const questions = [
             "Mesothelioma",
             "Collier's Asthma"
         ],
-        correctAnswer: 0
+        correctAnswer: 0 
     },
     {
         question: "Which among the following is the second most abundant Green-House-Gas(GHG) in the earth's atmosphere?",
