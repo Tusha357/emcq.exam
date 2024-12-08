@@ -104,7 +104,7 @@ function submitExam() {
     // Show wrong questions instead of top scores
     showWrongQuestions();
 }
- 
+
 function calculateScore() {
     return selectedQuestions.reduce((score, question, index) => {
         return score + (userAnswers[index] === question.correctAnswer ? 1 : 0);
@@ -240,10 +240,20 @@ function showScores(questionCount) {
         return;
     }
     
-    scoresDiv.innerHTML = filteredScores.map((entry, index) => `
-        <div>
-            <span>#${index + 1} ${entry.name}</span>
-            <span>${entry.score} out of ${entry.questionCount}</span>
-        </div>
-    `).join('');
+    scoresDiv.innerHTML = filteredScores.map((entry, index) => {
+        let rankClass = '';
+        if (index === 0) rankClass = 'top-1';
+        else if (index === 1) rankClass = 'top-2';
+        else if (index === 2) rankClass = 'top-3';
+        
+        return `
+            <div class="score-entry ${rankClass}">
+                <div class="rank-name">
+                    <span>#${index + 1}</span>
+                    <span>${entry.name}</span>
+                </div>
+                <div class="score-value">${entry.score} out of ${entry.questionCount}</div>
+            </div>
+        `;
+    }).join('');
 }
