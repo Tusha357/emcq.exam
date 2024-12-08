@@ -104,7 +104,7 @@ function submitExam() {
     // Show wrong questions instead of top scores
     showWrongQuestions();
 }
-
+ 
 function calculateScore() {
     return selectedQuestions.reduce((score, question, index) => {
         return score + (userAnswers[index] === question.correctAnswer ? 1 : 0);
