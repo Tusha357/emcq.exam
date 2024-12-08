@@ -4,6 +4,7 @@ let userAnswers = [];
 let timerInterval;
 let startTime;
 let userName = '';
+let isScoresVisible = false;
 
 function startQuiz() {
     userName = document.getElementById('user-name').value;
@@ -90,62 +91,18 @@ function submitExam() {
     clearInterval(timerInterval);
     const score = calculateScore();
     const totalQuestions = selectedQuestions.length;
-    const percentage = Math.round((score / totalQuestions) * 100);
     
-    // Get existing leaderboard
-    let leaderboardData = JSON.parse(localStorage.getItem('leaderboard') || '[]');
+    // Save score with timestamp
+    saveScore(score, totalQuestions);
     
-    // Find if user already exists with same question count
-    const existingUserIndex = leaderboardData.findIndex(entry => 
-        entry.name.toLowerCase() === userName.toLowerCase() &&
-        entry.questionCount === totalQuestions
-    );
-    
-    const newScore = {
-        name: userName,
-        score: percentage,
-        questionCount: totalQuestions,
-        date: new Date().toLocaleDateString()
-    };
-    
-    if (existingUserIndex !== -1) {
-        // If new score is higher, update the existing entry
-        if (percentage > leaderboardData[existingUserIndex].score) {
-            leaderboardData[existingUserIndex] = newScore;
-        }
-    } else {
-        // Add new entry
-        leaderboardData.push(newScore);
-    }
-    
-    // Sort by score (descending)
-    leaderboardData = leaderboardData
-        .filter(entry => entry.questionCount === totalQuestions)
-        .sort((a, b) => b.score - a.score);
-    
-    localStorage.setItem('leaderboard', JSON.stringify(leaderboardData));
-    
-    // Update display
-    document.getElementById('score').textContent = percentage;
+    // Show results
     document.getElementById('exam-screen').classList.add('hidden');
     document.getElementById('results-screen').classList.remove('hidden');
     
-    // Automatically show the leaderboard with all scores
-    const leaderboard = document.getElementById('leaderboard');
-    const topScores = document.getElementById('top-scores');
-    leaderboard.classList.remove('hidden');
+    document.getElementById('score').textContent = `${score} out of ${totalQuestions}`;
     
-    if (leaderboardData.length === 0) {
-        topScores.innerHTML = '<div class="no-scores">No scores yet!</div>';
-    } else {
-        topScores.innerHTML = leaderboardData
-            .map((entry, index) => `
-                <div class="${index < 3 ? 'top-' + (index + 1) : ''}">
-                    <span>${index === 0 ? '🥇' : index === 1 ? '🥈' : index === 2 ? '🥉' : '#' + (index + 1)} ${entry.name}</span>
-                    <span>${entry.score}% (${entry.date})</span>
-                </div>
-            `).join('');
-    }
+    // Show wrong questions instead of top scores
+    showWrongQuestions();
 }
 
 function calculateScore() {
@@ -154,30 +111,74 @@ function calculateScore() {
     }, 0);
 }
 
-document.getElementById('show-leaderboard').addEventListener('click', function() {
-    const leaderboard = document.getElementById('leaderboard');
-    const topScores = document.getElementById('top-scores');
+function saveScore(score, questionCount) {
+    const timestamp = new Date().toISOString();
+    const scoreData = {
+        name: userName,
+        score: score,
+        questionCount: questionCount,
+        timestamp: timestamp
+    };
+
+    // Get existing scores
+    let leaderboardData = JSON.parse(localStorage.getItem('leaderboard') || '[]');
     
-    if (leaderboard.classList.contains('hidden')) {
-        leaderboard.classList.remove('hidden');
-        const leaderboardData = JSON.parse(localStorage.getItem('leaderboard') || '[]');
-        
-        if (leaderboardData.length === 0) {
-            topScores.innerHTML = '<div class="no-scores">No scores yet!</div>';
-        } else {
-            topScores.innerHTML = leaderboardData
-                .filter(entry => entry.questionCount === selectedQuestions.length)
-                .map((entry, index) => `
-                    <div>
-                        <span>#${index + 1} ${entry.name}</span>
-                        <span>${entry.score}% (${entry.questionCount} Q)</span>
-                    </div>
-                `).join('');
-        }
-    } else {
-        leaderboard.classList.add('hidden');
+    // Add new score
+    leaderboardData.push(scoreData);
+    
+    // Sort by timestamp (newest first)
+    leaderboardData.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+    
+    // Save back to localStorage
+    localStorage.setItem('leaderboard', JSON.stringify(leaderboardData));
+}
+
+function showWrongQuestions() {
+    const wrongQuestions = selectedQuestions.filter((question, index) => 
+        userAnswers[index] !== question.correctAnswer
+    );
+
+    const wrongQuestionsContainer = document.getElementById('wrong-questions');
+    
+    if (wrongQuestions.length === 0) {
+        wrongQuestionsContainer.innerHTML = '<div class="perfect-score">Congratulations! You got all questions correct! 🎉</div>';
+        return;
     }
-});
+
+    let html = `
+        <div class="wrong-questions-header">
+            <h3>Questions to Review (${wrongQuestions.length} incorrect)</h3>
+            <p class="review-message">📚 Take time to study these topics to improve your understanding</p>
+        </div>
+        <div class="wrong-questions-list">
+    `;
+
+    wrongQuestions.forEach((question, index) => {
+        const userAnswer = userAnswers[selectedQuestions.indexOf(question)];
+        html += `
+            <div class="wrong-question-item">
+                <div class="question-text">
+                    <span class="question-number">Question ${selectedQuestions.indexOf(question) + 1}</span>
+                    ${question.question}
+                </div>
+                <div class="answer-comparison">
+                    <div class="wrong-answer">
+                        <span class="label">Your Answer:</span>
+                        <span class="incorrect">${userAnswer}</span>
+                    </div>
+                    <div class="correct-answer">
+                        <span class="label">Correct Answer:</span>
+                        <span class="correct">${question.correctAnswer}</span>
+                    </div>
+                </div>
+            </div>
+        `;
+    });
+
+    html += '</div>';
+    wrongQuestionsContainer.innerHTML = html;
+    wrongQuestionsContainer.classList.remove('hidden');
+}
 
 document.getElementById('restart-btn').addEventListener('click', function() {
     // Hide results screen
@@ -207,11 +208,6 @@ document.getElementById('home-btn').addEventListener('click', function() {
     selectedQuestions = [];
     userName = '';
     document.getElementById('user-name').value = '';
-});
-
-document.getElementById('view-scores-btn').addEventListener('click', function() {
-    document.getElementById('scores-modal').classList.remove('hidden');
-    showScores(10); // Show 10Q scores by default
 });
 
 document.querySelector('.close-btn').addEventListener('click', function() {
@@ -247,7 +243,7 @@ function showScores(questionCount) {
     scoresDiv.innerHTML = filteredScores.map((entry, index) => `
         <div>
             <span>#${index + 1} ${entry.name}</span>
-            <span>${entry.score}% (${entry.date})</span>
+            <span>${entry.score} out of ${entry.questionCount}</span>
         </div>
     `).join('');
 }
