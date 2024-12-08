@@ -582,7 +582,7 @@ const questions = [
     },
     {
         question: "Which conservation strategy is most effective for endangered species?",
-        options: [
+        options: [ 
             "Habitat protection",
             "Captive breeding",
             "Relocation",
