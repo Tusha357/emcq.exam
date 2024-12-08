@@ -1,5 +1,5 @@
 // Environmental Science MCQs - Additional Set
-const additional_questions = [
+const questions = [
     {
         question: "Which ecosystem service provides natural pest control in agriculture?",
         options: [
