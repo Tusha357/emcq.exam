@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div class="creator-credit">Created by Tushar</div>
+    <div class="creator-credit">Created.by tushar</div>
     
     <div class="container" id="welcome-screen">
         <div class="env-header">
@@ -18,7 +18,7 @@
         <div class="welcome-form">
             <input type="text" id="user-name" placeholder="Enter your name" required>
             <button onclick="startQuiz()" class="btn">Start Quiz</button>
-            <button id="view-welcome-scores" class="btn">View Scores</button>
+            <button id="view-all-questions" class="btn">View All Questions</button>
         </div>
         <div id="welcome-scores" class="scores-container hidden"></div>
     </div>
@@ -44,6 +44,14 @@
                 <button class="tab-btn" data-questions="70">70 Q</button>
             </div>
             <div id="all-scores" class="scores-list"></div>
+        </div>
+    </div>
+
+    <div id="questions-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-questions-btn">&times;</span>
+            <h2>All Questions</h2>
+            <div id="questions-list" class="questions-list"></div>
         </div>
     </div>
 
