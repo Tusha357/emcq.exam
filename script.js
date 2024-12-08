@@ -1,11 +1,39 @@
-let currentQuestionIndex = 0;
-let selectedQuestions = [];
-let userAnswers = [];
-let timerInterval;
-let startTime;
-let userName = '';
-let isScoresVisible = false;
+// Get DOM elements
+const startButton = document.getElementById('start-button');
+const questionContainer = document.getElementById('question-container');
+const optionsContainer = document.getElementById('options-container');
+const resultContainer = document.getElementById('results-screen');
+const timerDisplay = document.getElementById('timer');
+const scoreDisplay = document.getElementById('score');
+const questionsModal = document.getElementById('questions-modal');
+const closeQuestionsBtn = document.querySelector('.close-questions-btn');
+const viewAllQuestionsBtn = document.getElementById('view-all-questions');
+const questionsList = document.getElementById('questions-list');
+const topScoresDiv = document.getElementById('top-scores');
+const examScreen = document.getElementById('exam-screen');
+const welcomeScreen = document.getElementById('welcome-screen');
+const questionSelectScreen = document.getElementById('question-select-screen');
 
+let currentQuestionIndex = 0;
+let score = 0;
+let timer;
+let timeLeft;
+let selectedQuestions = [];
+let wrongQuestions = [];
+let questionCount = 10; // Default question count
+let userName = '';
+
+// Initialize the application
+function init() {
+    // Add event listeners
+    viewAllQuestionsBtn.addEventListener('click', showAllQuestions);
+    closeQuestionsBtn.addEventListener('click', () => questionsModal.classList.add('hidden'));
+    
+    // Set up score tabs
+    setupScoreTabs();
+}
+
+// Start the quiz (called from HTML)
 function startQuiz() {
     userName = document.getElementById('user-name').value;
     if (!userName) {
@@ -13,247 +41,312 @@ function startQuiz() {
         return;
     }
     
-    // Hide welcome screen and show question selection
-    document.getElementById('welcome-screen').classList.add('hidden');
-    document.getElementById('question-select-screen').classList.remove('hidden');
+    welcomeScreen.classList.add('hidden');
+    questionSelectScreen.classList.remove('hidden');
 }
 
-function startExam(questionCount) {
-    // Hide question selection screen
-    document.getElementById('question-select-screen').classList.add('hidden');
+// Start the exam with selected question count (called from HTML)
+function startExam(count) {
+    questionCount = count;
     
-    // Randomly select questions
-    const shuffledQuestions = [...questions].sort(() => Math.random() - 0.5);
-    selectedQuestions = shuffledQuestions.slice(0, questionCount);
+    // Reset variables
+    currentQuestionIndex = 0;
+    score = 0;
+    wrongQuestions = [];
     
-    // Show exam screen
-    document.getElementById('exam-screen').classList.remove('hidden');
+    // Select random questions
+    selectedQuestions = selectRandomQuestions(questionCount);
     
-    // Start timer and show first question
-    startTime = new Date();
+    // Hide question select screen and show exam screen
+    questionSelectScreen.classList.add('hidden');
+    examScreen.classList.remove('hidden');
+    
+    // Start timer
+    timeLeft = questionCount * 60; // 60 seconds per question
     startTimer();
+    
+    // Show first question
     showQuestion();
 }
 
-function startTimer() {
-    timerInterval = setInterval(updateTimer, 1000);
+// Select random questions from the question bank
+function selectRandomQuestions(count) {
+    const shuffled = [...questions].sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, count);
 }
 
-function updateTimer() {
-    const currentTime = new Date();
-    const timeDiff = Math.floor((currentTime - startTime) / 1000);
-    const minutes = Math.floor(timeDiff / 60);
-    const seconds = timeDiff % 60;
-    
-    document.getElementById('timer').textContent = 
-        `Time: ${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-}
-
+// Show current question
 function showQuestion() {
     const question = selectedQuestions[currentQuestionIndex];
-    document.getElementById('question-text').textContent = 
-        `${currentQuestionIndex + 1}. ${question.question}`;
     
-    const optionsContainer = document.getElementById('options-container');
+    // Update question text
+    document.getElementById('question-text').textContent = 
+        `Question ${currentQuestionIndex + 1} of ${questionCount}: ${question.question}`;
+    
+    // Clear previous options
     optionsContainer.innerHTML = '';
     
+    // Add new options
     question.options.forEach((option, index) => {
-        const optionDiv = document.createElement('div');
-        optionDiv.className = 'option';
-        optionDiv.textContent = option;
-        optionDiv.onclick = () => selectOption(index);
-        if (userAnswers[currentQuestionIndex] === index) {
-            optionDiv.classList.add('selected');
-        }
-        optionsContainer.appendChild(optionDiv);
+        const button = document.createElement('button');
+        button.classList.add('option');
+        button.textContent = option;
+        button.onclick = () => checkAnswer(index);
+        optionsContainer.appendChild(button);
     });
 
+    // Always hide submit button initially on each question
     const submitButton = document.getElementById('submit-exam');
-    submitButton.classList.toggle('hidden', currentQuestionIndex < selectedQuestions.length - 1);
+    submitButton.classList.add('hidden');
 }
 
-function selectOption(optionIndex) {
-    userAnswers[currentQuestionIndex] = optionIndex;
+// Check if the selected answer is correct
+function checkAnswer(selectedIndex) {
+    const question = selectedQuestions[currentQuestionIndex];
     
-    const options = document.querySelectorAll('.option');
-    options.forEach(option => option.classList.remove('selected'));
-    options[optionIndex].classList.add('selected');
+    if (selectedIndex === question.correctAnswer) {
+        score++;
+    } else {
+        wrongQuestions.push({
+            question: question.question,
+            selectedAnswer: question.options[selectedIndex],
+            correctAnswer: question.options[question.correctAnswer]
+        });
+    }
     
-    if (currentQuestionIndex < selectedQuestions.length - 1) {
-        setTimeout(() => {
-            currentQuestionIndex++;
-            showQuestion();
-        }, 500);
+    // If this is the last question, show the submit button
+    if (currentQuestionIndex === questionCount - 1) {
+        const submitButton = document.getElementById('submit-exam');
+        submitButton.classList.remove('hidden');
+        submitButton.onclick = submitExam;
+    } else {
+        // Move to next question
+        currentQuestionIndex++;
+        showQuestion();
     }
 }
 
+// Start the timer
+function startTimer() {
+    timer = setInterval(() => {
+        timeLeft--;
+        updateTimerDisplay();
+        
+        if (timeLeft <= 0) {
+            submitExam();
+        }
+    }, 1000);
+}
+
+// Update timer display
+function updateTimerDisplay() {
+    const minutes = Math.floor(timeLeft / 60);
+    const seconds = timeLeft % 60;
+    timerDisplay.textContent = 
+        `Time: ${minutes}:${seconds.toString().padStart(2, '0')}`;
+}
+
+// Submit the exam
 function submitExam() {
-    clearInterval(timerInterval);
-    const score = calculateScore();
-    const totalQuestions = selectedQuestions.length;
+    // Clear timer
+    clearInterval(timer);
     
-    // Save score with timestamp
-    saveScore(score, totalQuestions);
+    // Hide exam screen and show results
+    examScreen.classList.add('hidden');
+    resultContainer.classList.remove('hidden');
     
-    // Show results
-    document.getElementById('exam-screen').classList.add('hidden');
-    document.getElementById('results-screen').classList.remove('hidden');
+    // Update score display with both percentage and correct answers
+    const percentage = (score / questionCount) * 100;
+    scoreDisplay.textContent = `${percentage.toFixed(1)}% (${score} correct out of ${questionCount} questions)`;
     
-    document.getElementById('score').textContent = `${score} out of ${totalQuestions}`;
+    // Save score
+    saveScore(percentage, score);
     
-    // Show wrong questions instead of top scores
+    // Show wrong questions if any
     showWrongQuestions();
+    
+    // Show top scores
+    showTopScores();
 }
 
-function calculateScore() {
-    return selectedQuestions.reduce((score, question, index) => {
-        return score + (userAnswers[index] === question.correctAnswer ? 1 : 0);
-    }, 0);
-}
-
-function saveScore(score, questionCount) {
-    const timestamp = new Date().toISOString();
-    const scoreData = {
+// Save score to localStorage
+function saveScore(percentage, correctAnswers) {
+    const scores = JSON.parse(localStorage.getItem('scores') || '{}');
+    if (!scores[questionCount]) {
+        scores[questionCount] = [];
+    }
+    
+    const scoreEntry = {
         name: userName,
-        score: score,
-        questionCount: questionCount,
-        timestamp: timestamp
+        score: percentage,
+        correctAnswers: correctAnswers,
+        totalQuestions: questionCount,
+        date: new Date().toISOString()
     };
-
-    // Get existing scores
-    let leaderboardData = JSON.parse(localStorage.getItem('leaderboard') || '[]');
     
-    // Add new score
-    leaderboardData.push(scoreData);
+    // Check if user already exists in the scores
+    const existingUserIndex = scores[questionCount].findIndex(entry => entry.name === userName);
     
-    // Sort by timestamp (newest first)
-    leaderboardData.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+    if (existingUserIndex !== -1) {
+        // Update score if new score is higher
+        if (percentage > scores[questionCount][existingUserIndex].score) {
+            scores[questionCount][existingUserIndex] = scoreEntry;
+        }
+    } else {
+        // Add new score
+        scores[questionCount].push(scoreEntry);
+    }
     
-    // Save back to localStorage
-    localStorage.setItem('leaderboard', JSON.stringify(leaderboardData));
+    // Sort scores in descending order
+    scores[questionCount].sort((a, b) => b.score - a.score);
+    
+    // Keep only top 10 scores for each question count
+    scores[questionCount] = scores[questionCount].slice(0, 10);
+    
+    localStorage.setItem('scores', JSON.stringify(scores));
 }
 
+// Show wrong questions
 function showWrongQuestions() {
-    const wrongQuestions = selectedQuestions.filter((question, index) => 
-        userAnswers[index] !== question.correctAnswer
-    );
-
     const wrongQuestionsContainer = document.getElementById('wrong-questions');
+    if (!wrongQuestionsContainer) return;
+    
+    wrongQuestionsContainer.innerHTML = '';
     
     if (wrongQuestions.length === 0) {
-        wrongQuestionsContainer.innerHTML = '<div class="perfect-score">Congratulations! You got all questions correct! 🎉</div>';
+        wrongQuestionsContainer.innerHTML = '<div class="perfect-score">Perfect Score! 🎉</div>';
         return;
     }
-
-    let html = `
-        <div class="wrong-questions-header">
-            <h3>Questions to Review (${wrongQuestions.length} incorrect)</h3>
-            <p class="review-message">📚 Take time to study these topics to improve your understanding</p>
-        </div>
-        <div class="wrong-questions-list">
-    `;
-
-    wrongQuestions.forEach((question, index) => {
-        const userAnswer = userAnswers[selectedQuestions.indexOf(question)];
-        html += `
-            <div class="wrong-question-item">
-                <div class="question-text">
-                    <span class="question-number">Question ${selectedQuestions.indexOf(question) + 1}</span>
-                    ${question.question}
-                </div>
-                <div class="answer-comparison">
-                    <div class="wrong-answer">
-                        <span class="label">Your Answer:</span>
-                        <span class="incorrect">${userAnswer}</span>
-                    </div>
-                    <div class="correct-answer">
-                        <span class="label">Correct Answer:</span>
-                        <span class="correct">${question.correctAnswer}</span>
-                    </div>
-                </div>
-            </div>
+    
+    wrongQuestions.forEach(wrong => {
+        const div = document.createElement('div');
+        div.innerHTML = `
+            <p><strong>Question:</strong> ${wrong.question}</p>
+            <p><strong>Your Answer:</strong> ${wrong.selectedAnswer}</p>
+            <p><strong>Correct Answer:</strong> ${wrong.correctAnswer}</p>
         `;
+        wrongQuestionsContainer.appendChild(div);
     });
-
-    html += '</div>';
-    wrongQuestionsContainer.innerHTML = html;
-    wrongQuestionsContainer.classList.remove('hidden');
 }
 
+// Show top scores in the results screen
+function showTopScores() {
+    const scores = JSON.parse(localStorage.getItem('scores') || '{}');
+    const questionScores = scores[questionCount] || [];
+    
+    // Clear previous scores
+    topScoresDiv.innerHTML = '';
+    
+    if (questionScores.length === 0) {
+        topScoresDiv.innerHTML = '<p>No previous scores available</p>';
+        return;
+    }
+    
+    // Create a list for scores
+    const scoresList = document.createElement('ul');
+    scoresList.classList.add('top-scores-list');
+    
+    // Get top 5 scores
+    const topScores = questionScores.slice(0, 5);
+    
+    // Add each score to the list
+    topScores.forEach((score, index) => {
+        const li = document.createElement('li');
+        const scoreText = score.correctAnswers ? 
+            `${score.score.toFixed(1)}% (${score.correctAnswers}/${score.totalQuestions} correct)` :
+            `${score.score.toFixed(1)}%`;
+        li.innerHTML = `
+            <span class="rank">#${index + 1}</span>
+            <span class="name">${score.name}</span>
+            <span class="score">${scoreText}</span>
+        `;
+        scoresList.appendChild(li);
+    });
+    
+    topScoresDiv.appendChild(scoresList);
+}
+
+// Show all questions in alphabetical order
+function showAllQuestions() {
+    // Sort questions alphabetically
+    const sortedQuestions = [...questions].sort((a, b) => 
+        a.question.toLowerCase().localeCompare(b.question.toLowerCase())
+    );
+    
+    // Clear the questions list
+    questionsList.innerHTML = '';
+    
+    // Add each question to the list
+    sortedQuestions.forEach((q, index) => {
+        const questionDiv = document.createElement('div');
+        questionDiv.classList.add('question-item');
+        questionDiv.textContent = `${index + 1}. ${q.question}`;
+        questionsList.appendChild(questionDiv);
+    });
+    
+    // Show the modal
+    questionsModal.classList.remove('hidden');
+}
+
+// Set up score tabs
+function setupScoreTabs() {
+    const tabs = document.querySelectorAll('.tab-btn');
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const count = parseInt(tab.dataset.questions);
+            showScoresForCount(count);
+            
+            // Update active tab
+            tabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+        });
+    });
+}
+
+// Show scores for specific question count in modal
+function showScoresForCount(count) {
+    const scores = JSON.parse(localStorage.getItem('scores') || '{}');
+    const questionScores = scores[count] || [];
+    
+    // Update scores list
+    scoresList.innerHTML = '';
+    
+    if (questionScores.length === 0) {
+        const li = document.createElement('li');
+        li.textContent = 'No scores yet';
+        scoresList.appendChild(li);
+        return;
+    }
+    
+    questionScores.forEach((score, index) => {
+        const li = document.createElement('li');
+        const date = new Date(score.date).toLocaleDateString();
+        const scoreText = score.correctAnswers ? 
+            `${score.score.toFixed(1)}% (${score.correctAnswers}/${score.totalQuestions} correct)` :
+            `${score.score.toFixed(1)}%`;
+        li.textContent = `${index + 1}. ${score.name}: ${scoreText} - ${date}`;
+        scoresList.appendChild(li);
+    });
+}
+
+// Show scores modal
+function showScores() {
+    modal.classList.remove('hidden');
+    showScoresForCount(10); // Default to 10 questions
+}
+
+// Add event listeners for restart and home buttons
 document.getElementById('restart-btn').addEventListener('click', function() {
-    // Hide results screen
-    document.getElementById('results-screen').classList.add('hidden');
-    
-    // Show question selection screen
-    document.getElementById('question-select-screen').classList.remove('hidden');
-    
-    // Clear previous answers
-    userAnswers = [];
-    currentQuestionIndex = 0;
-    selectedQuestions = [];
+    resultContainer.classList.add('hidden');
+    questionSelectScreen.classList.remove('hidden');
 });
 
 document.getElementById('home-btn').addEventListener('click', function() {
-    // Hide all screens
-    document.getElementById('results-screen').classList.add('hidden');
-    document.getElementById('question-select-screen').classList.add('hidden');
-    document.getElementById('exam-screen').classList.add('hidden');
-    
-    // Show welcome screen
-    document.getElementById('welcome-screen').classList.remove('hidden');
-    
-    // Clear all states
-    userAnswers = [];
-    currentQuestionIndex = 0;
-    selectedQuestions = [];
-    userName = '';
+    resultContainer.classList.add('hidden');
+    welcomeScreen.classList.remove('hidden');
     document.getElementById('user-name').value = '';
+    userName = '';
 });
 
-document.querySelector('.close-btn').addEventListener('click', function() {
-    document.getElementById('scores-modal').classList.add('hidden');
-});
-
-// Tab functionality
-document.querySelectorAll('.score-tabs .tab-btn').forEach(tab => {
-    tab.addEventListener('click', function() {
-        // Update active tab
-        document.querySelectorAll('.score-tabs .tab-btn').forEach(t => t.classList.remove('active'));
-        this.classList.add('active');
-        
-        // Show scores for selected question count
-        showScores(parseInt(this.dataset.questions));
-    });
-});
-
-function showScores(questionCount) {
-    const scoresDiv = document.getElementById('all-scores');
-    const leaderboardData = JSON.parse(localStorage.getItem('leaderboard') || '[]');
-    
-    // Filter scores for selected question count and sort by score
-    const filteredScores = leaderboardData
-        .filter(entry => entry.questionCount === questionCount)
-        .sort((a, b) => b.score - a.score);
-    
-    if (filteredScores.length === 0) {
-        scoresDiv.innerHTML = '<div class="no-scores">No scores yet for this section!</div>';
-        return;
-    }
-    
-    scoresDiv.innerHTML = filteredScores.map((entry, index) => {
-        let rankClass = '';
-        if (index === 0) rankClass = 'top-1';
-        else if (index === 1) rankClass = 'top-2';
-        else if (index === 2) rankClass = 'top-3';
-        
-        return `
-            <div class="score-entry ${rankClass}">
-                <div class="rank-name">
-                    <span>#${index + 1}</span>
-                    <span>${entry.name}</span>
-                </div>
-                <div class="score-value">${entry.score} out of ${entry.questionCount}</div>
-            </div>
-        `;
-    }).join('');
-}
+// Initialize when DOM is loaded
+document.addEventListener('DOMContentLoaded', init);
