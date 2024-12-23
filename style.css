@@ -67,8 +67,8 @@ html, body {
 
 .timer {
     position: fixed;
-    top: 20px;
-    right: 20px;
+    bottom: 20px; /* Changed from top to bottom */
+    left: 20px; /* Changed from right to left */
     background: var(--primary);
     color: var(--white);
     padding: 10px 20px;
@@ -78,7 +78,6 @@ html, body {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     animation: pulse 2s infinite;
 }
-
 h1 {
     text-align: center;
     color: var(--secondary);
