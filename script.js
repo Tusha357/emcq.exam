@@ -17,7 +17,7 @@ const questionSelectScreen = document.getElementById('question-select-screen');
 let currentQuestionIndex = 0;
 let score = 0;
 let timer;
-let timeLeft;
+let elapsedTime = 0; // Changed from timeLeft to elapsedTime
 let selectedQuestions = [];
 let wrongQuestions = [];
 let questionCount = 10; // Default question count
@@ -61,8 +61,8 @@ function startExam(count) {
     questionSelectScreen.classList.add('hidden');
     examScreen.classList.remove('hidden');
     
-    // Start timer
-    timeLeft = questionCount * 60; // 60 seconds per question
+    // Reset and start timer
+    elapsedTime = 0;
     startTimer();
     
     // Show first question
@@ -129,10 +129,11 @@ function checkAnswer(selectedIndex) {
 // Start the timer
 function startTimer() {
     timer = setInterval(() => {
-        timeLeft--;
+        elapsedTime++; // Increment elapsed time
         updateTimerDisplay();
-        
-        if (timeLeft <= 0) {
+
+        // Check if time limit is reached for 70 questions
+        if (questionCount === 70 && elapsedTime >= 5400) { // 5400 seconds = 1 hour 30 minutes
             submitExam();
         }
     }, 1000);
@@ -140,8 +141,8 @@ function startTimer() {
 
 // Update timer display
 function updateTimerDisplay() {
-    const minutes = Math.floor(timeLeft / 60);
-    const seconds = timeLeft % 60;
+    const minutes = Math.floor(elapsedTime / 60);
+    const seconds = elapsedTime % 60;
     timerDisplay.textContent = 
         `Time: ${minutes}:${seconds.toString().padStart(2, '0')}`;
 }
