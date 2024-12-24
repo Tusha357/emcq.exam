@@ -1450,8 +1450,106 @@ const questions = [
         ],
         correctAnswer: 0
     },
-    // Adding all 512 questions following the same format...
-    // ... (512 questions)
+  {
+    question: "Environmental Studies:",
+    options: [
+      "is an interdisciplinary academic field",
+      "methodically studies human interaction with the environment",
+      "includes the natural environment, built environment, and the sets of relationships between them",
+      "all of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    question: "Environment studies does not involve:",
+    options: ["psychology", "demography", "ethics", "literature"],
+    correctAnswer: 3
+  },
+  {
+    question: "Political decisions are made with respect to political jurisdictions; environmental problems:",
+    options: [
+      "often transcend these jurisdictions",
+      "respect political boundaries",
+      "often have little to do with regional economic decisions",
+      "none of the above"
+    ],
+    correctAnswer: 0
+  },
+  {
+    question: "The main outcome of the 1992 United Nations Conference on Environment and Development, held in Rio de Janeiro, Brazil, was:",
+    options: [
+      "It produced a blueprint intended to guide development in sustainable directions.",
+      "A global agreement on a framework for environmental legislation.",
+      "A report entitled 'Our Common Future.'",
+      "It raised awareness of the need to preserve biodiversity in the Amazon River Basin."
+    ],
+    correctAnswer: 0
+  },
+  {
+    question: "Abiotic environment does not include:",
+    options: ["Soil", "Air", "Water", "Plant"],
+    correctAnswer: 3
+  },
+  {
+    question: "Van Mahotsav is an annual tree-planting festival in India, celebrated on:",
+    options: ["2nd June", "1st July", "1st December", "15th September"],
+    correctAnswer: 1
+  },
+  {
+    question: "Biotic environment includes:",
+    options: ["Producer", "Consumer", "Decomposer", "All the above"],
+    correctAnswer: 3
+  },
+  {
+    question: "Outcomes of Rio Conference do not include:",
+    options: [
+      "The UN Framework Convention on Climate Change",
+      "The Convention on Biological Diversity (CBD)",
+      "Convention for the Protection of the Ozone Layer",
+      "Commission on Sustainable Development (CSD)"
+    ],
+    correctAnswer: 2
+  },
+  {
+    question: "Which of the following follow the concept of sustainable development?",
+    options: [
+      "Fishing the mature fish instead of the young fish.",
+      "Using wind power instead of burning coal to generate electricity.",
+      "The prohibition of trading endangered species.",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    question: "The Montreal Protocol, signed in 1987 and strengthened in 1990, aims to:",
+    options: [
+      "Attain the global optimal level of common property resource.",
+      "Rely on internationally tradable emission permits.",
+      "Minimize free riders of public goods.",
+      "Reduce ozone depletion through the cutting of chlorofluorocarbon production."
+    ],
+    correctAnswer: 3
+  },
+  {
+    question: "What does light energy converted by green plants represent in an ecosystem?",
+    options: [
+      "Primary productivity",
+      "Secondary productivity",
+      "Gross productivity",
+      "Net productivity"
+    ],
+    correctAnswer: 0
+  },
+  {
+    question: "Which layer of the atmosphere contains the ozone layer?",
+    options: ["Troposphere", "Stratosphere", "Mesosphere", "Thermosphere"],
+    correctAnswer: 1
+  },
+  {
+    question: "What is a key measure to preserve biodiversity?",
+    options: ["Reforestation", "Industrialization", "Urbanization", "Deforestation"],
+    correctAnswer: 0
+  }
 ];
- 
+
 
