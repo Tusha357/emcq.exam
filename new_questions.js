@@ -1,3 +1,4 @@
+const questions = [
 
     {
         question: "Environmental Studies:",
