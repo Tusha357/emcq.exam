@@ -13,6 +13,8 @@ const topScoresDiv = document.getElementById('top-scores');
 const examScreen = document.getElementById('exam-screen');
 const welcomeScreen = document.getElementById('welcome-screen');
 const questionSelectScreen = document.getElementById('question-select-screen');
+const showIncorrectMcqsBtn = document.getElementById('show-incorrect-mcqs'); // Added new element
+const incorrectMcqsList = document.getElementById('incorrect-mcqs-list'); // Added new element
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -28,6 +30,9 @@ function init() {
     // Add event listeners
     viewAllQuestionsBtn.addEventListener('click', showAllQuestions);
     closeQuestionsBtn.addEventListener('click', () => questionsModal.classList.add('hidden'));
+
+    // Add event listener for showing incorrect MCQs
+    showIncorrectMcqsBtn.addEventListener('click', showIncorrectMcqs);
     
     // Set up score tabs
     setupScoreTabs();
@@ -328,6 +333,29 @@ function showScoresForCount(count) {
         li.textContent = `${index + 1}. ${score.name}: ${scoreText} - ${date}`;
         scoresList.appendChild(li);
     });
+}
+
+// Show incorrect MCQs
+function showIncorrectMcqs() {
+    incorrectMcqsList.innerHTML = ''; // Clear any existing content
+
+    if (wrongQuestions.length === 0) {
+        incorrectMcqsList.innerHTML = '<div class="perfect-score">Perfect Score! 🎉</div>';
+        return;
+    }
+
+    wrongQuestions.forEach(mcq => {
+        const mcqItem = document.createElement('div');
+        mcqItem.classList.add('mcq-item');
+        mcqItem.innerHTML = `
+            <p><strong>Question:</strong> ${mcq.question}</p>
+            <p><strong>Your Answer:</strong> ${mcq.selectedAnswer}</p>
+            <p><strong>Correct Answer:</strong> ${mcq.correctAnswer}</p>
+        `;
+        incorrectMcqsList.appendChild(mcqItem);
+    });
+
+    incorrectMcqsList.classList.toggle('hidden');
 }
 
 // Show scores modal
