@@ -78,6 +78,7 @@ html, body {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     animation: pulse 2s infinite;
 }
+
 h1 {
     text-align: center;
     color: var(--secondary);
@@ -122,6 +123,40 @@ button:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
     background: var(--secondary);
+}
+
+/* New button styles */
+.button {
+    padding: 12px 30px;
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    background: var(--secondary);
+}
+
+/* Hidden class */
+.hidden {
+    display: none !important;
+}
+
+/* New mcq-item styles */
+.mcq-item {
+    background: var(--background);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
 }
 
 .question-count-options button {
@@ -255,7 +290,6 @@ button:hover {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     border: 2px solid #cd7f32;
 }
-
 .leaderboard-section {
     background-color: #f8f9fa;
     padding: 15px;
@@ -941,3 +975,6 @@ button:hover {
         grid-template-columns: 1fr;
     }
 }
+
+
+
