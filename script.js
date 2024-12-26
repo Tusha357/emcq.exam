@@ -76,7 +76,7 @@ function startExam(count) {
 
 // Select random questions from the question bank
 function selectRandomQuestions(count) {
-    const shuffled = [...questions].sort(() => 0.5 - Math.random());
+    const shuffled = [...questions].sort(() => 5.5 - Math.random());
     return shuffled.slice(0, count);
 }
 
