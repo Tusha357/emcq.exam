@@ -81,7 +81,60 @@
         </div>
     </div>
 
+    <!-- New Unit Buttons -->
+    <div id="unit-buttons" class="container">
+        <button id="unit-1" class="unit-button" onclick="showMCQs(1)">Unit 1</button>
+        <button id="unit-2" class="unit-button" onclick="showMCQs(2)">Unit 2</button>
+        <button id="unit-3" class="unit-button" onclick="showMCQs(3)">Unit 3</button>
+        <button id="unit-4" class="unit-button" onclick="showMCQs(4)">Unit 4</button>
+        <button id="unit-5" class="unit-button" onclick="showMCQs(5)">Unit 5</button>
+    </div>
+    <div id="mcqs-list" class="mcqs-list container"></div>
+
     <script src="new_questions.js"></script>
     <script src="script.js"></script>
+    <script>
+        // Example MCQs organized by unit
+        const mcqsByUnit = {
+            1: [
+                { question: "MCQ 1 for Unit 1" },
+                { question: "MCQ 2 for Unit 1" },
+                // Add more MCQs for Unit 1
+            ],
+            2: [
+                { question: "MCQ 1 for Unit 2" },
+                { question: "MCQ 2 for Unit 2" },
+                // Add more MCQs for Unit 2
+            ],
+            3: [
+                { question: "MCQ 1 for Unit 3" },
+                { question: "MCQ 2 for Unit 3" },
+                // Add more MCQs for Unit 3
+            ],
+            4: [
+                { question: "MCQ 1 for Unit 4" },
+                { question: "MCQ 2 for Unit 4" },
+                // Add more MCQs for Unit 4
+            ],
+            5: [
+                { question: "MCQ 1 for Unit 5" },
+                { question: "MCQ 2 for Unit 5" },
+                // Add more MCQs for Unit 5
+            ]
+        };
+
+        function showMCQs(unit) {
+            const mcqs = mcqsByUnit[unit] || [];
+            const mcqsList = document.getElementById('mcqs-list');
+            mcqsList.innerHTML = '';
+
+            mcqs.forEach(mcq => {
+                const mcqItem = document.createElement('div');
+                mcqItem.classList.add('mcq-item');
+                mcqItem.innerHTML = `<p>${mcq.question}</p>`;
+                mcqsList.appendChild(mcqItem);
+            });
+        }
+    </script>
 </body>
 </html>
