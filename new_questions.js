@@ -922,6 +922,168 @@ const questions = [
     options: ["Reforestation", "Industrialization", "Urbanization", "Deforestation"],
     correctAnswer: 0
   },
+  {
+    question: "Environmental education is important only at:",
+    options: ["Primary school stage", "Secondary school stage", "College stage", "All stages"],
+    correctAnswer: 3
+  },
+  {
+    question: "Biosphere is:",
+    options: [
+      "The solid shell of inorganic materials on the surface of the Earth",
+      "The thin shell of organic matter on the surface of Earth comprising all living things",
+      "The sphere which occupies the maximum volume of all the spheres",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    question: "Which of the following is not influenced by human activities?",
+    options: [
+      "Depletion of groundwater",
+      "Destruction of mangroves and wetlands",
+      "Increased extinction rate of species",
+      "None of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    question: "Which of the following conceptual spheres of the environment has the least storage capacity for water?",
+    options: ["Atmosphere", "Lithosphere", "Hydrosphere", "Biosphere"],
+    correctAnswer: 0
+  },
+  {
+    question: "The largest reservoir of nitrogen on our planet is:",
+    options: ["Ocean", "Atmosphere", "Biosphere", "Fossil fuels"],
+    correctAnswer: 1
+  },
+  {
+    question: "The word 'Environment' is derived from the French word:",
+    options: ["Environ", "Environner", "E – Environner", "Envo"],
+    correctAnswer: 1
+  },
+  {
+    question: "Which of the following is a greenhouse gas?",
+    options: ["CO₂", "H₂S", "N₂", "None of the above"],
+    correctAnswer: 0
+  },
+  {
+    question: "Which of the following causes acid rain?",
+    options: ["CO₂", "SO₂", "N₂", "None of the above"],
+    correctAnswer: 1
+  },
+  {
+    question: "Ozone depletion is harmful to:",
+    options: ["Digestion", "Reproduction", "Skin", "All of the above"],
+    correctAnswer: 2
+  },
+  {
+    question: "All environmental crises are solely due to:",
+    options: ["Population", "Water quality", "Air quality", "None of the above"],
+    correctAnswer: 0
+  },
+  {
+    question: "The environment consists of various segments such as Atmosphere, Hydrosphere, Lithosphere, and:",
+    options: ["Hemisphere", "O₂ sphere", "Soil sphere", "Biosphere"],
+    correctAnswer: 3
+  },
+  {
+    question: "The ______ is the protective blanket of gases surrounding the Earth. It protects the Earth from the hostile environment of outer space.",
+    options: ["Hemisphere", "Atmosphere", "Lithosphere", "Biosphere"],
+    correctAnswer: 1
+  },
+  {
+    question: "______% of the total water supply is available as freshwater in the form of rivers, lakes, streams, and groundwater for human consumption and other uses.",
+    options: ["1%", "2%", "3%", "4%"],
+    correctAnswer: 2
+  },
+  {
+    question: "The lithosphere consists of the upper mantle and the:",
+    options: ["Atmosphere", "Crust", "Thrust", "None of the above"],
+    correctAnswer: 1
+  },
+  {
+    question: "Atmosphere allows the transmission of significant amounts of radiation only in the regions of:",
+    options: ["100–200 nm", "200–500 nm", "300–2500 nm", "None of the above"],
+    correctAnswer: 2
+  },
+  {
+    question: "Atmosphere acts as a source for ______ for plant photosynthesis and ______ for respiration.",
+    options: ["O₂ and CO₂", "CO₂ and N₂", "NO₂ and CO₂", "CO₂ and O₂"],
+    correctAnswer: 0
+  },
+  {
+    question: "______ acts as a source for nitrogen for nitrogen-fixing bacteria and ammonia-producing plants.",
+    options: ["Atmosphere", "Hydrosphere", "Lithosphere", "Nanosphere"],
+    correctAnswer: 0
+  },
+  {
+    question: "The ______ refers to the kingdom of living organisms and their interactions with the environment.",
+    options: ["Atmosphere", "Lithosphere", "Hydrosphere", "Biosphere"],
+    correctAnswer: 3
+  },
+  {
+    question: "The biosphere is very large and complex and is divided into smaller units called:",
+    options: ["Organisms", "Ecosystems", "Modules", "None of these"],
+    correctAnswer: 1
+  },
+  {
+    question: "______ is a natural process that warms the Earth's surface.",
+    options: ["Greenhouse effect", "Global warming", "Deforestation", "None of these"],
+    correctAnswer: 0
+  },
+  {
+    question: "How is the greenhouse effect experienced on Earth?",
+    options: ["Global warming", "Pollution", "Both a. and b.", "None of the above"],
+    correctAnswer: 2
+  },
+  {
+    question: "Which of the following gases is/are responsible for global warming?",
+    options: ["Carbon dioxide (CO₂)", "Water vapour (H₂O)", "Both a. and b.", "None of the above"],
+    correctAnswer: 2
+  },
+  {
+    question: "In desert areas, there is a large difference between day and night temperatures mainly because of:",
+    options: [
+      "Presence of carbon dioxide in air as it acts as a barrier for emanating infrared radiation from the Earth's surface",
+      "Presence of water vapour in air as it acts as a barrier for emanating infrared radiation from the Earth's surface",
+      "Absence of carbon dioxide in air as it acts as a barrier for emanating infrared radiation from the Earth's surface",
+      "Absence of water vapour in air as it acts as a barrier for emanating infrared radiation from the Earth's surface"
+    ],
+    correctAnswer: 3
+  },
+  {
+    question: "The radiation energy from the sun is produced by:",
+    options: ["Fission reaction", "Fusion reaction", "Both a. and b.", "None of the above"],
+    correctAnswer: 1
+  },
+  {
+    question: "Which of the following mentioned GHGs has the highest atmospheric lifetime?",
+    options: ["Carbon tetrafluoride", "Nitrous oxide", "Methane", "CFC"],
+    correctAnswer: 0
+  },
+  {
+    question: "Which of the following greenhouse gases is contributed by cattle farming?",
+    options: ["Nitrous oxide", "Methane", "Carbon monoxide", "All of the mentioned"],
+    correctAnswer: 1
+  },
+  {
+    question: "Volcanic eruptions contribute to the global greenhouse phenomenon.",
+    options: ["True", "False"],
+    correctAnswer: 0
+  },
+  {
+    question: "Gas molecules that absorb thermal infrared radiation and are present in large quantity to change the climate system are known as:",
+    options: ["Alpha radiations", "Beta radiations", "Greenhouse gases", "Ozone gases"],
+    correctAnswer: 2
+  },
+  {
+    question: "If the atmosphere doesn't act like a greenhouse, the temperature of Earth would become:",
+    options: ["Too pleasant to enjoy", "Too cold to survive", "Too hot to survive", "Too terrible to survive"],
+    correctAnswer: 1
+  },
+
+
 
 //unit 2
 */
