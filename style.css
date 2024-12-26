@@ -150,7 +150,8 @@ button:hover {
     display: none !important;
 }
 
-/* New mcq-item styles */
+/* Add these styles to your existing style.css */
+
 .unit-button {
     padding: 12px 30px;
     background: var(--primary);
@@ -171,6 +172,10 @@ button:hover {
     background: var(--secondary);
 }
 
+.mcqs-list {
+    margin-top: 20px;
+}
+
 .mcq-item {
     background: var(--background);
     padding: 15px;
@@ -178,6 +183,7 @@ button:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 10px;
 }
+
 
 .question-count-options button {
     background: var(--accent);
