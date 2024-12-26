@@ -53,16 +53,7 @@ const questions = [
         ],
         correctAnswer: 3
     },
-    {
-        question: "Van Mahotsav is an annual tree-planting festival in India, celebrated on:",
-        options: [
-            "2nd June",
-            "1st July",
-            "1st December",
-            "15th September"
-        ],
-        correctAnswer: 1
-    },
+    
     {
         question: "Biotic environment includes:",
         options: [
@@ -133,16 +124,7 @@ const questions = [
         ],
         correctAnswer: 3
     },
-    {
-        question: "Land covers up only what percentage of the earth's surface?",
-        options: [
-            "10",
-            "29",
-            "40",
-            "30"
-        ],
-        correctAnswer: 1
-    },
+   
     {
         question: "Which metals are used for making Jewellery?",
         options: [
@@ -853,21 +835,8 @@ const questions = [
         ],
         correctAnswer: 0
     },
-  {
-    question: "Environmental Studies:",
-    options: [
-      "is an interdisciplinary academic field",
-      "methodically studies human interaction with the environment",
-      "includes the natural environment, built environment, and the sets of relationships between them",
-      "all of the above"
-    ],
-    correctAnswer: 3
-  },
-  {
-    question: "Environment studies does not involve:",
-    options: ["psychology", "demography", "ethics", "literature"],
-    correctAnswer: 3
-  },
+ 
+  
   {
     question: "Political decisions are made with respect to political jurisdictions; environmental problems:",
     options: [
@@ -956,11 +925,7 @@ const questions = [
 
 //unit 2
 */
-  {
-    question: "What percentage of the Earth's surface is covered with water?",
-    options: ["20%", "10%", "71%", "100%"],
-    correctAnswer: 2
-  },
+ 
   {
     question: "When trees are cut, the amount of oxygen:",
     options: ["decreases", "increases", "both (a) and (b)", "remains the same"],
@@ -1069,114 +1034,174 @@ const questions = [
   //unit 3
     
   {
-    question: "What percentage of the Earth's surface is covered with water?",
-    options: ["20%", "10%", "71%", "100%"],
-    correctAnswer: 2
-  },
-  {
-    question: "When trees are cut, the amount of oxygen:",
-    options: ["decreases", "increases", "both (a) and (b)", "remains the same"],
-    correctAnswer: 0
-  },
-  {
-    question: "Identify the uses of water:",
-    options: ["Domestic", "Industrial", "Agricultural", "All of the above"],
-    correctAnswer: 3
-  },
-  {
-    question: "Land covers up only what percentage of the Earth's surface?",
-    options: ["10%", "29%", "40%", "30%"],
+    question: "Which one of the following is not a gaseous bio-chemical cycle in an ecosystem?",
+    options: ["Carbon Cycle", "Phosphorus Cycle", "Sulphur Cycle", "Nitrogen Cycle"],
     correctAnswer: 1
   },
   {
-    question: "Which metals are used for making jewellery?",
-    options: ["Sodium, Potassium", "Zinc, Tungsten", "Iron, Copper, Aluminium", "Gold, Silver, Platinum"],
+    question: "Transfer of energy from source of plants through a series of organisms is known as:",
+    options: ["Food web", "Energy Cycle", "Food Chain", "Biological system"],
+    correctAnswer: 2
+  },
+  {
+    question: "The type of ecosystem with the highest mean plant productivity is:",
+    options: ["Tundra", "Temperate grassland", "Desert", "Tropical Rain Forest"],
     correctAnswer: 3
   },
   {
-    question: "Write an example of non-metallic minerals:",
-    options: ["Lime", "Haematite", "Cuprite", "Bauxite"],
-    correctAnswer: 0
-  },
-  {
-    question: "Energy resources derived from natural organic materials are called:",
-    options: ["Geothermal energy sources", "Fossil fuels", "Biomass", "All of the above"],
-    correctAnswer: 3
-  },
-  {
-    question: "Forest is responsible for:",
+    question: "In an ecosystem, standing crop refers to:",
     options: [
-      "Watershed protection",
-      "Land erosion control",
-      "Providing economic and environmental benefits",
-      "All of the above"
+      "All the green plants",
+      "All non-living materials",
+      "All living and dead animals",
+      "All living materials both animals and plants"
     ],
     correctAnswer: 3
   },
   {
-    question: "Identify the metallic minerals from the following:",
-    options: ["Haematite", "Bauxite", "Both a and b", "None"],
-    correctAnswer: 2
+    question: "An ecosystem that can be easily damaged but can recover after some time if the damaging effect stops has:",
+    options: [
+      "High Stability and High Resilience",
+      "High Stability and Low Resilience",
+      "Low Stability and Low Resilience",
+      "Low Stability and High Resilience"
+    ],
+    correctAnswer: 3
   },
   {
-    question: "A land area used as a permanent residence is called:",
-    options: ["Industrial", "Agricultural", "Residential", "Landfill"],
-    correctAnswer: 2
-  },
-  {
-    question: "Conservation of soil and water is which type of function of forest resources?",
-    options: ["Productive", "Protective", "Regulative", "None"],
+    question: "Which ecosystem produces the highest annual net primary productivity?",
+    options: [
+      "Tropical Evergreen Forest",
+      "Tropical Rain Forest",
+      "Tropical Deciduous Forest",
+      "Temperate Evergreen Forest"
+    ],
     correctAnswer: 1
   },
   {
-    question: "Which energy is converted into electrical energy by a solar cell?",
-    options: ["Chemical energy", "Nuclear energy", "Solar energy", "Magnetic energy"],
+    question: "The term used to describe the variety of life found on Earth and all natural processes is:",
+    options: ["Biodiversity", "Ecosystem", "Biosphere", "Ecology"],
+    correctAnswer: 0
+  },
+  {
+    question: "Which of the following is not a value of biodiversity?",
+    options: ["Social Use", "Aesthetic Use", "Environmental Use", "Moral"],
     correctAnswer: 2
   },
   {
-    question: "Renewable sources of energy include:",
-    options: ["Coal", "Petroleum", "Plants", "Uranium"],
+    question: "Biodiversity contained in the ecosystem that provides forest dwellers with all their daily needs is a value of:",
+    options: ["Ethical and Moral", "Consumptive", "Aesthetic", "Social"],
+    correctAnswer: 1
+  },
+  {
+    question: "The initiative of biodiversity assessment focuses on which ecosystem types?",
+    options: ["Forest", "Wetland", "Marine", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    question: "Which of the following is not a cause of biodiversity loss?",
+    options: ["Overexploitation", "Eco-friendly practices", "Co-extinction", "Habitat loss and fragmentation"],
+    correctAnswer: 1
+  },
+  {
+    question: "Marketable products such as animal skins, ivory, medicinal plants, and honey come under:",
+    options: ["Productive value", "Consumptive value", "Aesthetic value", "Social value"],
+    correctAnswer: 0
+  },
+  {
+    question: "The 'lungs of the planet' are:",
+    options: ["Sahyadri rain forest", "Konkan rain forest", "Amazon rain forest", "South Africa rain forest"],
     correctAnswer: 2
   },
   {
-    question: "What is LPG?",
+    question: "Which leads to over-exploitation of natural resources?",
+    options: ["Greed", "Eco-friendly practices", "Need", "All of the above"],
+    correctAnswer: 0
+  },
+  {
+    question: "Which of the following is not an important hotspot in India?",
+    options: ["Himalayas", "Western Ghats", "Indo-Burma", "Central Ghats"],
+    correctAnswer: 3
+  },
+  {
+    question: "What flows through the ecosystem while matter cycles within them?",
+    options: ["Energy", "Force", "Pressure", "Wind"],
+    correctAnswer: 0
+  },
+  {
+    question: "The process by which green plants and some organisms use sunlight to synthesize nutrients is called:",
+    options: ["Chemosynthesis", "Photosynthesis", "Food Chain", "Food Web"],
+    correctAnswer: 1
+  },
+  {
+    question: "Which type of ecosystem accounts for most of the net primary productivity on Earth even though it has low average net productivity?",
+    options: ["Tropical Rain Forest", "Desert", "Tropical Evergreen Forest", "Ocean"],
+    correctAnswer: 3
+  },
+  {
+    question: "Plants are considered producers because:",
     options: [
-      "Liquefied Petroleum Gas",
-      "Loaded Petroleum Gas",
-      "Liquid Petroleum Gas",
-      "None of the above"
+      "Plants produce their own food",
+      "Plants depend on other organisms for food",
+      "Plants are decomposers",
+      "Plants do not require energy"
     ],
     correctAnswer: 0
   },
   {
-    question: "The resources which can be used again and again after passing through some processes are known as:",
-    options: ["Renewable resources", "Non-renewable resources", "Cyclic resources", "None of the above"],
-    correctAnswer: 0
-  },
-  {
-    question: "Which of the following is an example of a cyclic resource?",
-    options: ["Water", "Oil", "Coal", "None of the above"],
-    correctAnswer: 0
-  },
-  {
-    question: "The energy sources continuously replenished at a constant rate are called:",
-    options: ["New resources", "Renewable resources", "Old resources", "Non-renewable resources"],
+    question: "The area to which a species is biologically adapted to live is known as:",
+    options: ["Niche", "Habitat", "Succession", "All of the above"],
     correctAnswer: 1
   },
   {
-    question: "Tidal energy is used to rotate turbines and generate:",
-    options: ["Fuel", "Water", "Salt", "Electricity"],
-    correctAnswer: 3
-  },
-  {
-    question: "What produces benefits like flood control, irrigation, and water supply?",
-    options: ["Thermal power", "Solar energy", "Hydropower", "Wind power"],
+    question: "A set of organisms that resemble one another in appearance and behavior is called:",
+    options: ["Exon", "Prisons", "Species", "None of the above"],
     correctAnswer: 2
   },
   {
-    question: "Geothermal energy is:",
-    options: ["The heat of the Earth's interior", "Solar energy", "Hydro energy", "Wind energy"],
+    question: "The destruction of habitat of plants and animals is called:",
+    options: ["Endemism", "Endangered Species", "Habitat loss", "Flood"],
+    correctAnswer: 2
+  },
+  {
+    question: "Each organism in an ecosystem is at a specific feeding stage called:",
+    options: ["Climax level", "Producer level", "Trophic level", "Consumptive level"],
+    correctAnswer: 2
+  },
+  {
+    question: "Zoos are an example of:",
+    options: ["In-situ conservation", "In-vivo conservation", "Ex-situ conservation", "Ex-vivo conservation"],
+    correctAnswer: 2
+  },
+  {
+    question: "Study of inter-relationship between organisms and their environment is called:",
+    options: ["Ecology", "Ecosystem", "Phytogeography", "Ethology"],
     correctAnswer: 0
+  },
+  {
+    question: "How are the atmosphere, hydrosphere, and lithosphere connected?",
+    options: ["Hydrological cycle", "Nitrogen cycle", "Oxygen cycle", "Carbon cycle"],
+    correctAnswer: 0
+  },
+  {
+    question: "An ecosystem gradually merges with an adjoining one through a transitional zone called:",
+    options: ["Ecological niche", "Ecological footprint", "Ecotone", "Biodiversity loss"],
+    correctAnswer: 2
+  },
+  {
+    question: "The driving force in an ecosystem is:",
+    options: ["Plants", "Producers", "Solar energy", "Biomass energy"],
+    correctAnswer: 2
+  },
+  {
+    question: "Which of the following can be a producer in an ecosystem?",
+    options: ["Plants", "Animals", "Humans", "Fish"],
+    correctAnswer: 0
+  },
+  {
+    question: "A trophic level refers to:",
+    options: ["Area in the tropics", "An organism's position in the food chain", "An organism's position in the ecosystem", "An organism's position in a biome"],
+    correctAnswer: 1
   }
 ];
 
