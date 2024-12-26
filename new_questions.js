@@ -1,4 +1,7 @@
 const questions = [
+ 
+//unit 1
+/*
 
     {
         question: "Environmental Studies:",
@@ -198,7 +201,7 @@ const questions = [
             "Liquid Petroleum Gas",
             "None of the Above"
         ],
-        correctAnswer: 2
+        correctAnswer: 0
     },
     {
         question: "The resources which can be used again and again after passing through some processes are known as:",
@@ -208,7 +211,7 @@ const questions = [
             "Cyclic resources",
             "none of the above"
         ],
-        correctAnswer: 0
+        correctAnswer: 2
     },
     {
         question: "Which of the following follow the concept of cyclic resource?",
@@ -949,7 +952,231 @@ const questions = [
     question: "What is a key measure to preserve biodiversity?",
     options: ["Reforestation", "Industrialization", "Urbanization", "Deforestation"],
     correctAnswer: 0
+  },
+
+//unit 2
+*/
+  {
+    question: "What percentage of the Earth's surface is covered with water?",
+    options: ["20%", "10%", "71%", "100%"],
+    correctAnswer: 2
+  },
+  {
+    question: "When trees are cut, the amount of oxygen:",
+    options: ["decreases", "increases", "both (a) and (b)", "remains the same"],
+    correctAnswer: 0
+  },
+  {
+    question: "Identify the uses of water:",
+    options: ["Domestic", "Industrial", "Agricultural", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    question: "Land covers up only what percentage of the Earth's surface?",
+    options: ["10%", "29%", "40%", "30%"],
+    correctAnswer: 1
+  },
+  {
+    question: "Which metals are used for making jewellery?",
+    options: ["Sodium, Potassium", "Zinc, Tungsten", "Iron, Copper, Aluminium", "Gold, Silver, Platinum"],
+    correctAnswer: 3
+  },
+  {
+    question: "Write an example of non-metallic minerals:",
+    options: ["Lime", "Haematite", "Cuprite", "Bauxite"],
+    correctAnswer: 0
+  },
+  {
+    question: "Energy resources derived from natural organic materials are called:",
+    options: ["Geothermal energy sources", "Fossil fuels", "Biomass", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    question: "Forest is responsible for:",
+    options: [
+      "Watershed protection",
+      "Land erosion control",
+      "Providing economic and environmental benefits",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    question: "Identify the metallic minerals from the following:",
+    options: ["Haematite", "Bauxite", "Both a and b", "None"],
+    correctAnswer: 2
+  },
+  {
+    question: "A land area used as a permanent residence is called:",
+    options: ["Industrial", "Agricultural", "Residential", "Landfill"],
+    correctAnswer: 2
+  },
+  {
+    question: "Conservation of soil and water is which type of function of forest resources?",
+    options: ["Productive", "Protective", "Regulative", "None"],
+    correctAnswer: 1
+  },
+  {
+    question: "Which energy is converted into electrical energy by a solar cell?",
+    options: ["Chemical energy", "Nuclear energy", "Solar energy", "Magnetic energy"],
+    correctAnswer: 2
+  },
+  {
+    question: "Renewable sources of energy include:",
+    options: ["Coal", "Petroleum", "Plants", "Uranium"],
+    correctAnswer: 2
+  },
+  {
+    question: "What is LPG?",
+    options: [
+      "Liquefied Petroleum Gas",
+      "Loaded Petroleum Gas",
+      "Liquid Petroleum Gas",
+      "None of the above"
+    ],
+    correctAnswer: 0
+  },
+  {
+    question: "The resources which can be used again and again after passing through some processes are known as:",
+    options: ["Renewable resources", "Non-renewable resources", "Cyclic resources", "None of the above"],
+    correctAnswer: 0
+  },
+  {
+    question: "Which of the following is an example of a cyclic resource?",
+    options: ["Water", "Oil", "Coal", "None of the above"],
+    correctAnswer: 0
+  },
+  {
+    question: "The energy sources continuously replenished at a constant rate are called:",
+    options: ["New resources", "Renewable resources", "Old resources", "Non-renewable resources"],
+    correctAnswer: 1
+  },
+  {
+    question: "Tidal energy is used to rotate turbines and generate:",
+    options: ["Fuel", "Water", "Salt", "Electricity"],
+    correctAnswer: 3
+  },
+  {
+    question: "What produces benefits like flood control, irrigation, and water supply?",
+    options: ["Thermal power", "Solar energy", "Hydropower", "Wind power"],
+    correctAnswer: 2
+  },
+  {
+    question: "Geothermal energy is:",
+    options: ["The heat of the Earth's interior", "Solar energy", "Hydro energy", "Wind energy"],
+    correctAnswer: 0
+  },
+  //unit 3
+    
+  {
+    question: "What percentage of the Earth's surface is covered with water?",
+    options: ["20%", "10%", "71%", "100%"],
+    correctAnswer: 2
+  },
+  {
+    question: "When trees are cut, the amount of oxygen:",
+    options: ["decreases", "increases", "both (a) and (b)", "remains the same"],
+    correctAnswer: 0
+  },
+  {
+    question: "Identify the uses of water:",
+    options: ["Domestic", "Industrial", "Agricultural", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    question: "Land covers up only what percentage of the Earth's surface?",
+    options: ["10%", "29%", "40%", "30%"],
+    correctAnswer: 1
+  },
+  {
+    question: "Which metals are used for making jewellery?",
+    options: ["Sodium, Potassium", "Zinc, Tungsten", "Iron, Copper, Aluminium", "Gold, Silver, Platinum"],
+    correctAnswer: 3
+  },
+  {
+    question: "Write an example of non-metallic minerals:",
+    options: ["Lime", "Haematite", "Cuprite", "Bauxite"],
+    correctAnswer: 0
+  },
+  {
+    question: "Energy resources derived from natural organic materials are called:",
+    options: ["Geothermal energy sources", "Fossil fuels", "Biomass", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    question: "Forest is responsible for:",
+    options: [
+      "Watershed protection",
+      "Land erosion control",
+      "Providing economic and environmental benefits",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    question: "Identify the metallic minerals from the following:",
+    options: ["Haematite", "Bauxite", "Both a and b", "None"],
+    correctAnswer: 2
+  },
+  {
+    question: "A land area used as a permanent residence is called:",
+    options: ["Industrial", "Agricultural", "Residential", "Landfill"],
+    correctAnswer: 2
+  },
+  {
+    question: "Conservation of soil and water is which type of function of forest resources?",
+    options: ["Productive", "Protective", "Regulative", "None"],
+    correctAnswer: 1
+  },
+  {
+    question: "Which energy is converted into electrical energy by a solar cell?",
+    options: ["Chemical energy", "Nuclear energy", "Solar energy", "Magnetic energy"],
+    correctAnswer: 2
+  },
+  {
+    question: "Renewable sources of energy include:",
+    options: ["Coal", "Petroleum", "Plants", "Uranium"],
+    correctAnswer: 2
+  },
+  {
+    question: "What is LPG?",
+    options: [
+      "Liquefied Petroleum Gas",
+      "Loaded Petroleum Gas",
+      "Liquid Petroleum Gas",
+      "None of the above"
+    ],
+    correctAnswer: 0
+  },
+  {
+    question: "The resources which can be used again and again after passing through some processes are known as:",
+    options: ["Renewable resources", "Non-renewable resources", "Cyclic resources", "None of the above"],
+    correctAnswer: 0
+  },
+  {
+    question: "Which of the following is an example of a cyclic resource?",
+    options: ["Water", "Oil", "Coal", "None of the above"],
+    correctAnswer: 0
+  },
+  {
+    question: "The energy sources continuously replenished at a constant rate are called:",
+    options: ["New resources", "Renewable resources", "Old resources", "Non-renewable resources"],
+    correctAnswer: 1
+  },
+  {
+    question: "Tidal energy is used to rotate turbines and generate:",
+    options: ["Fuel", "Water", "Salt", "Electricity"],
+    correctAnswer: 3
+  },
+  {
+    question: "What produces benefits like flood control, irrigation, and water supply?",
+    options: ["Thermal power", "Solar energy", "Hydropower", "Wind power"],
+    correctAnswer: 2
+  },
+  {
+    question: "Geothermal energy is:",
+    options: ["The heat of the Earth's interior", "Solar energy", "Hydro energy", "Wind energy"],
+    correctAnswer: 0
   }
 ];
-
 
