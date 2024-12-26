@@ -1,35 +1,8 @@
 const questions = [
- /*// new_questions.js
 
-const mcqsByUnit = {
-    1: [
-        { question: "What is the main cause of global warming?", options: ["Greenhouse gases", "Deforestation", "Nuclear power", "Overpopulation"], correctAnswer: 0 },
-        { question: "Which gas is primarily responsible for the greenhouse effect?", options: ["Oxygen", "Hydrogen", "Carbon Dioxide", "Nitrogen"], correctAnswer: 2 },
-        // Add more MCQs for Unit 1
-    ],
-    2: [
-        { question: "What is the process by which plants make their food?", options: ["Respiration", "Digestion", "Photosynthesis", "Transpiration"], correctAnswer: 2 },
-        { question: "Which part of the plant is responsible for photosynthesis?", options: ["Root", "Stem", "Leaf", "Flower"], correctAnswer: 2 },
-        // Add more MCQs for Unit 2
-    ],
-    3: [
-        { question: "What is the main source of energy for the Earth?", options: ["Wind", "Sun", "Water", "Geothermal"], correctAnswer: 1 },
-        { question: "Which renewable resource is used to generate hydroelectric power?", options: ["Wind", "Solar", "Water", "Biomass"], correctAnswer: 2 },
-        // Add more MCQs for Unit 3
-    ],
-    4: [
-        { question: "What is the term for species that no longer exist?", options: ["Endangered", "Threatened", "Extinct", "Vulnerable"], correctAnswer: 2 },
-        { question: "Which of the following is a method to conserve biodiversity?", options: ["Pollution", "Deforestation", "Protected areas", "Overexploitation"], correctAnswer: 2 },
-        // Add more MCQs for Unit 4
-    ],
-    5: [
-        { question: "What is the most efficient way to reduce waste?", options: ["Recycle", "Reuse", "Reduce", "All of the above"], correctAnswer: 3 },
-        { question: "Which type of energy is considered the cleanest?", options: ["Coal", "Oil", "Natural Gas", "Solar"], correctAnswer: 3 },
-        // Add more MCQs for Unit 5
-    ]
-};*/
+
 //unit 1
-/*
+
 
     {
         question: "Environmental Studies:",
@@ -1114,7 +1087,7 @@ const mcqsByUnit = {
 
 
 //unit 2
-*/
+
  
   {
     question: "When trees are cut, the amount of oxygen:",
