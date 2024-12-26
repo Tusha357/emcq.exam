@@ -74,10 +74,19 @@ function startExam(count) {
     showQuestion();
 }
 
+// Function to shuffle an array using the Fisher-Yates algorithm
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
 // Select random questions from the question bank
 function selectRandomQuestions(count) {
-    const shuffled = [...questions].sort(() => 5.5 - Math.random());
-    return shuffled.slice(0, count);
+    const shuffled = shuffleArray([...questions]); // Shuffle the questions array
+    return shuffled.slice(0, count); // Select the first 'count' questions
 }
 
 // Show current question
@@ -91,8 +100,9 @@ function showQuestion() {
     // Clear previous options
     optionsContainer.innerHTML = '';
     
-    // Add new options
-    question.options.forEach((option, index) => {
+    // Shuffle and add new options
+    const shuffledOptions = shuffleArray([...question.options]);
+    shuffledOptions.forEach((option, index) => {
         const button = document.createElement('button');
         button.classList.add('option');
         button.textContent = option;
@@ -103,8 +113,7 @@ function showQuestion() {
     // Always hide submit button initially on each question
     const submitButton = document.getElementById('submit-exam');
     submitButton.classList.add('hidden');
-}
-
+}    
 // Check if the selected answer is correct
 function checkAnswer(selectedIndex) {
     const question = selectedQuestions[currentQuestionIndex];
