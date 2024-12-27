@@ -3163,6 +3163,206 @@ const questions = [
   correctAnswer: 3,
 },
 //other
+ 
+    {
+        question: "The final stable community in ecological succession is",
+        options: [
+            "Climax",
+            "Sere",
+            "Pioneers",
+            "Carnivores"
+        ],
+        correctAnswer: 0 
+    },
+    {
+        question: "education of environment will help every citizen to protection environment.",
+        options: [
+            "Formal",
+            "Informal",
+            "Both A and B",
+            "None of these"
+        ],
+        correctAnswer: 2
+    },
+    {
+        question: "Groundwater recharging can be achieved by",
+        options: [
+            "recharging pits",
+            "recharging well",
+            "both",
+            "none"
+        ],
+        correctAnswer: 2
+    },
+    {
+        question: "New species entering a geographical region are called ____ species.",
+        options: [
+            "Exotic",
+            "Extic",
+            "Toxic",
+            "Exto exotic"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "Composting is a process of treatment of",
+        options: [
+            "solid waste",
+            "liquid waste",
+            "gaseous waste",
+            "none of these"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "To prevent noise pollution _____ should be installed around hospitals.",
+        options: [
+            "high walls",
+            "low walls",
+            "sound barriers",
+            "none of the above"
+        ],
+        correctAnswer: 2
+    },
+    {
+        question: "The Acronym NGO stands for",
+        options: [
+            "New Geneva Organization",
+            "New Government Organisation",
+            "National Geographic Organisation",
+            "Non-Government Organization"
+        ],
+        correctAnswer: 3
+    },
+    {
+        question: "Black Lung disease is common in -",
+        options: [
+            "Farmers",
+            "Coal mine workers",
+            "Refinery workers",
+            "Petrochemical workers"
+        ],
+        correctAnswer: 1
+    },
+    {
+        question: "In order to produce electricity, a fuel cell burns:",
+        options: [
+            "Helium",
+            "Nitrogen",
+            "Hydrogen",
+            "None of the above"
+        ],
+        correctAnswer: 2
+    },
+    {
+        question: "Assertion (A): The ecosystem surrounding a river gets damaged due to construction of a dam. Reason (R): The area gets inundated with large volume of water.",
+        options: [
+            "Both (A) and (R) are true and (R) is the correct explanation of A.",
+            "Both (A) and (R) are true but (R) is not the correct explanation of A",
+            "(A) is true, but (R) is wrong.",
+            "Both (A) and (R) are wrong."
+        ],
+        correctAnswer: 1
+    },
+    {
+        question: "____ is not a method of water conservation.",
+        options: [
+            "rainwater harvesting",
+            "construction of bunds",
+            "reusing greywater",
+            "using shower"
+        ],
+        correctAnswer: 3
+    },
+    {
+        question: "Species with very limited distribution over relatively small locality is called",
+        options: [
+            "Endangered species",
+            "Extinct species.",
+            "Endemic species.",
+            "None of the above."
+        ],
+        correctAnswer: 2
+    },
+    {
+        question: "Deforestation can",
+        options: [
+            "Increase the rain fall",
+            "Introduce silt in the rivers",
+            "Increase soil fertility",
+            "None of these"
+        ],
+        correctAnswer: 1
+    },
+    {
+        question: "Which is the first Airport in the world powered entirely by Solar energy?",
+        options: [
+            "Cochin, Kerala",
+            "Bengaluru, Karnataka",
+            "Chennai, Tamil Nadu",
+            "Mumbai, Maharashtra"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "The variation of life forms within an ecosystem or on earth is named as:",
+        options: [
+            "biodiversity",
+            "biome",
+            "biological variety",
+            "none of these"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "pH value of drinking water should be between ____ and 8.5.",
+        options: [
+            "4",
+            "7",
+            "6.5",
+            "10"
+        ],
+        correctAnswer: 2
+    },
+    {
+        question: "Which State in India nuclear accident took place?",
+        options: [
+            "Tamilnadu",
+            "Gujarat",
+            "Maharashtra",
+            "Karnataka"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "Waste water coming out of the bathroom and kitchen which does not have foul smell is called ____",
+        options: [
+            "sewage",
+            "sullage",
+            "refuse",
+            "water"
+        ],
+        correctAnswer: 1
+    },
+    {
+        question: "Which act was enacted in 1972 to protect of plants and animal species in India?",
+        options: [
+            "Indian Forest Act",
+            "Wildlife Protection Act",
+            "Environmental Act",
+            "Natural Protection Act"
+        ],
+        correctAnswer: 1
+    },
+    {
+        question: "Which of the following is the water pollutant ?",
+        options: [
+            "Heat",
+            "Lead, Mercury, Zinc",
+            "Herbicides ",
+          "all of above"],
+      correctAnswer: 0
+    },
 
     {
         question: "Which of the following is the prime objective of Watershed Management?",
