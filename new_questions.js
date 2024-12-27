@@ -3163,6 +3163,137 @@ const questions = [
   correctAnswer: 3,
 },
 //other
+
+    {
+        question: "Which of the following is the prime objective of Watershed Management?",
+        options: [
+            "Utilization",
+            "Conservation",
+            "Analysis",
+            "Pollution"
+        ],
+        correctAnswer: 1 // Conservation
+    },
+    {
+        question: "Which of the following sources provides the least energy for industrialized countries?",
+        options: [
+            "Petroleum",
+            "Coal",
+            "Nuclear fuels",
+            "Gas"
+        ],
+        correctAnswer: 3 // Gas
+    },
+    {
+        question: "What is true of ecosystem?",
+        options: [
+            "Primary consumers are least dependent upon producers",
+            "Primary consumers equal in number as producers",
+            "Producers are more than primary consumers",
+            "Secondary consumers are the largest and most powerful"
+        ],
+        correctAnswer: 2 // Producers are more than primary consumers
+    },
+    {
+        question: "Uncontrolled hybridization of different species of animals/plants. Which of the following pollution it leads to?",
+        options: [
+            "Genetic pollution",
+            "Homogenization",
+            "Genetic swamping",
+            "None of the above"
+        ],
+        correctAnswer: 0 // Genetic pollution
+    },
+    {
+        question: "In ______ food chain, dead organic matter serves as principal energy input",
+        options: [
+            "Detritus",
+            "Flowing",
+            "Original",
+            "None of the above"
+        ],
+        correctAnswer: 0 // Detritus
+    },
+    {
+        question: "Which of the following is major biodiversity in West Bengal?",
+        options: [
+            "Deccan Peninsula-Chhota Nagpur",
+            "Deccan Peninsula-Deccan south",
+            "Deccan Peninsula-central highlands",
+            "None of the above"
+        ],
+        correctAnswer: 3 // None of the above
+    },
+    {
+        question: "Which country has the highest incidence of pollution linked deaths in the world?",
+        options: [
+            "China",
+            "India",
+            "Bangladesh",
+            "Pakistan"
+        ],
+        correctAnswer: 1 // India
+    },
+    {
+        question: "Now a days Environmental Accounting is making news, What is Environment Accounting?",
+        options: [
+            "It is a method to statistically analyze the green areas of the country",
+            "It is a method of accounting in which all units are expressed in Carbon Credits",
+            "It is a method to measure the consumption of the environment/natural resources",
+            "It is a method of accounting in which all measurement is expressed in Carbon Credits"
+        ],
+        correctAnswer: 2 // It is a method to measure the consumption of the environment/natural resources
+    },
+    {
+        question: "If some one notices polluted water coming from industry in Maharashtra, he/she can approach to",
+        options: [
+            "MSEB",
+            "MPCB",
+            "MERC",
+            "All of these"
+        ],
+        correctAnswer: 1 // MPCB
+    },
+    {
+        question: "Which process among the following refers to accumulation and storage of rain water for reuse?",
+        options: [
+            "Rain collection",
+            "Rainwater harvesting",
+            "Rain digging",
+            "Rain water pumping"
+        ],
+        correctAnswer: 1 // Rainwater harvesting
+    },
+    {
+        question: "dB is a standard abbreviation used for the quantitative expression of",
+        options: [
+            "The dominant Bacillus in a culture",
+            "The density of bacteria in a medium",
+            "A certain pesticide",
+            "Noise Pollution"
+        ],
+        correctAnswer: 3 // Noise Pollution
+    },
+    {
+        question: "Which of the following is not a viable protection against deforestation?",
+        options: [
+            "Reduce the consumption of forest and related products",
+            "Boycott products of Companies involved in deforestation",
+            "Privatization of forest land",
+            "Environmental education"
+        ],
+        correctAnswer: 2 // Privatization of forest land
+    },
+    {
+        question: "The world's first national park is ______ which is located in USA",
+        options: [
+            "Yellow park",
+            "Yellow wildlife",
+            "Yellow stone",
+            "Yellow centre"
+        ],
+        correctAnswer: 2 // Yellowstone
+    },
 {
       question: "Which ecosystem service provides natural pest control in agriculture?",
       options: [
@@ -4277,6 +4408,7 @@ const questions = [
   options: ["Burning of fossil fuels", "Deforestation", "Overgrazing", "All of the above"],
   correctAnswer: 0,
 }
+  
 
 
 ];
