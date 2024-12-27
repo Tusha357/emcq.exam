@@ -1,9 +1,6 @@
+// Environmental Science MCQs - Additional Set
 const questions = [
-
-
-//unit 1
-
-
+    // unit 1
     {
         question: "Environmental Studies:",
         options: [
@@ -54,7 +51,16 @@ const questions = [
         ],
         correctAnswer: 3
     },
-    
+    {
+        question: "Van Mahotsav is an annual tree-planting festival in India, celebrated on:",
+        options: [
+            "2nd June",
+            "1st July",
+            "1st December",
+            "15th September"
+        ],
+        correctAnswer: 1
+    },
     {
         question: "Biotic environment includes:",
         options: [
@@ -125,7 +131,16 @@ const questions = [
         ],
         correctAnswer: 3
     },
-   
+    {
+        question: "Land covers up only what percentage of the earth's surface?",
+        options: [
+            "10",
+            "29",
+            "40",
+            "30"
+        ],
+        correctAnswer: 1
+    },
     {
         question: "Which metals are used for making Jewellery?",
         options: [
@@ -184,7 +199,7 @@ const questions = [
             "Liquid Petroleum Gas",
             "None of the Above"
         ],
-        correctAnswer: 0
+        correctAnswer: 2
     },
     {
         question: "The resources which can be used again and again after passing through some processes are known as:",
@@ -194,7 +209,7 @@ const questions = [
             "Cyclic resources",
             "none of the above"
         ],
-        correctAnswer: 2
+        correctAnswer: 0
     },
     {
         question: "Which of the following follow the concept of cyclic resource?",
@@ -836,8 +851,21 @@ const questions = [
         ],
         correctAnswer: 0
     },
- 
-  
+  {
+    question: "Environmental Studies:",
+    options: [
+      "is an interdisciplinary academic field",
+      "methodically studies human interaction with the environment",
+      "includes the natural environment, built environment, and the sets of relationships between them",
+      "all of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    question: "Environment studies does not involve:",
+    options: ["psychology", "demography", "ethics", "literature"],
+    correctAnswer: 3
+  },
   {
     question: "Political decisions are made with respect to political jurisdictions; environmental problems:",
     options: [
@@ -863,12 +891,7 @@ const questions = [
     options: ["Soil", "Air", "Water", "Plant"],
     correctAnswer: 3
   },
-  {
-    question: "Van Mahotsav is an annual tree-planting festival in India, celebrated on:",
-    options: ["2nd June", "1st July", "1st December", "15th September"],
-    correctAnswer: 1
-  },
-  {
+   {
     question: "Biotic environment includes:",
     options: ["Producer", "Consumer", "Decomposer", "All the above"],
     correctAnswer: 3
@@ -923,7 +946,7 @@ const questions = [
     options: ["Reforestation", "Industrialization", "Urbanization", "Deforestation"],
     correctAnswer: 0
   },
-  {
+{
     question: "Environmental education is important only at:",
     options: ["Primary school stage", "Secondary school stage", "College stage", "All stages"],
     correctAnswer: 3
@@ -1083,12 +1106,334 @@ const questions = [
     options: ["Too pleasant to enjoy", "Too cold to survive", "Too hot to survive", "Too terrible to survive"],
     correctAnswer: 1
   },
+{
+    question: "Waves that pass through glass walls of greenhouse are in form of ____.",
+    options: ["gamma rays", "x-rays", "infrared waves", "radio waves"],
+    correctAnswer: 2,
+  },
+  // Question 36
+  {
+    question: "Global warming effects ____.",
+    options: [
+      "forests around the globe",
+      "temperature of the globe",
+      "wind and moisture of the globe",
+      "water around the globe",
+    ],
+    correctAnswer: 1,
+  },
+  // Question 37
+  {
+    question: "The gases that contribute to the greenhouse effect on Earth are, in order of greatest to smallest in importance:",
+    options: ["CO2, H2O, CH4", "H2O, CO2, CH4", "CH4, CO2, H2O", "H2O, CH4, CO2"],
+    correctAnswer: 1,
+  },
+  // Question 38
+  {
+    question: "The order of the atmospheric layers, starting from closest to the surface to the top of the atmosphere, is ____.",
+    options: [
+      "Mesosphere, Troposphere, Thermosphere, Stratosphere",
+      "Troposphere, Stratosphere, Mesosphere, Thermosphere",
+      "Thermosphere, Mesosphere, Troposphere, Stratosphere",
+      "Troposphere, Mesosphere, Stratosphere, Thermosphere",
+    ],
+    correctAnswer: 1,
+  },
+  // Question 39
+  {
+    question: "By how much has atmospheric carbon dioxide concentration increased ever since the Industrial Revolution?",
+    options: ["20 %", "10 %", "40 %", "60 %"],
+    correctAnswer: 2,
+  },
+  // Question 40
+  {
+    question: "Which is the most abundant greenhouse gas in the atmosphere?",
+    options: ["Carbon dioxide", "Water vapour", "Methane", "Nitrogen"],
+    correctAnswer: 1,
+  },
+  // Question 41
+  {
+    question: "Which of the following is the largest sink for carbon dioxide gas?",
+    options: ["Forests", "Oceans", "Ice sheets", "Grasslands"],
+    correctAnswer: 1,
+  },
+  // Question 42
+  {
+    question: "Apart from Earth, which other celestial body(s) exhibits greenhouse gas effect?",
+    options: ["Venus", "Mars", "Titan", "All of the mentioned"],
+    correctAnswer: 3,
+  },
+  // Question 43
+  {
+    question: "Which of the following radiations of the sun do greenhouse gases trap?",
+    options: ["Visible radiations", "Infrared radiations", "UV radiations", "All the radiations"],
+    correctAnswer: 1,
+  },
+  // Question 44
+  {
+    question: "Clouds help in cooling down the planet and do not contribute to greenhouse effect. True or false?",
+    options: ["True", "False"],
+    correctAnswer: 0,
+  },
+  // Question 45
+  {
+    question: "What does GWP in the context of greenhouse gases indicate?",
+    options: [
+      "Global Warming Parameters",
+      "Gradual Warming Pattern",
+      "Global Warming Patterns",
+      "Global Warming Potential",
+    ],
+    correctAnswer: 3,
+  },
+  // Question 46
+  {
+    question: "At what concentration (in ppm), is nitrogen present in the atmosphere?",
+    options: ["780,840", "390,420", "78,084", "900,000"],
+    correctAnswer: 2,
+  },
+  // Question 47
+  {
+    question: "The planetary boundary layer belongs to which of the following atmospheric layers?",
+    options: ["Exosphere", "Ionosphere", "Stratosphere", "None of the mentioned"],
+    correctAnswer: 3,
+  },
+  // Question 48
+  {
+    question: "What would have been the average temperature of Earth without greenhouse gases?",
+    options: ["0 °C", "-7 °C", "-9 °C", "-19 °C"],
+    correctAnswer: 3,
+  },
+  // Question 49
+  {
+    question: "Ever since the industrial revolution, by how much has the average temperature of the Earth increased?",
+    options: ["0.24 °C", "0.6 °C", "1.2 °C", "1.8 °C"],
+    correctAnswer: 2,
+  },
+  // Question 50
+  {
+    question: "How much of the sun’s radiation energy is absorbed by the greenhouse gases to warm the planet?",
+    options: ["75 PW", "1750 GW", "1500 MW", "150 TW"],
+    correctAnswer: 3,
+  },{
+    question: "What is the emissivity of the Earth’s surface?",
+    options: ["0.457", "0.578", "0.135", "1.42"],
+    correctAnswer: 1,
+  },
+  // Question 52
+  {
+    question: "The Earth is still said to be in the \"ice age\" period.",
+    options: ["True", "False"],
+    correctAnswer: 0,
+  },
+  // Question 53
+  {
+    question: "Below which of the following pH is rain regarded as ‘acid rain’?",
+    options: ["7", "7.3", "5.6", "6"],
+    correctAnswer: 2,
+  },
+  // Question 54
+  {
+    question: "Glass containers are generally not preferred for sampling rain water. Why?",
+    options: [
+      "Glass containers are expensive",
+      "Glass containers are not easy to maintain",
+      "Glass containers affect the pH of the rain water",
+      "All of the mentioned",
+    ],
+    correctAnswer: 3,
+  },
+  // Question 55
+  {
+    question: "Which of the following gases are main contributors to acid rain?",
+    options: [
+      "Carbon dioxide and carbon monoxide",
+      "Sulphur dioxide and carbon dioxide",
+      "Sulphur dioxide and nitrogen dioxide",
+      "Sulphur dioxide and nitrous oxide",
+    ],
+    correctAnswer: 2,
+  },
+  // Question 56
+  {
+    question: "Which place in India receives the highest annual rainfall?",
+    options: ["Mawsynram", "Cherrapunji", "Siju", "Phyllut"],
+    correctAnswer: 0,
+  },
+  // Question 57
+  {
+    question: "Who discovered the phenomenon of acid rain?",
+    options: [
+      "George Brown",
+      "James T. Stewart",
+      "Robert Angus Smith",
+      "Charles David",
+    ],
+    correctAnswer: 2,
+  },
+  // Question 58
+  {
+    question: "Which of the following is/are natural contributor(s) to sulphur dioxide in the atmosphere?",
+    options: ["Sea sprays", "Decaying vegetation", "Volcanic eruption", "All of the mentioned"],
+    correctAnswer: 3,
+  },
+  // Question 59
+  {
+    question: "What is the pH required for the survival of aquatic animals and plants?",
+    options: ["6.5", "7.5", "6", "7"],
+    correctAnswer: 1,
+  },
+  // Question 60
+  {
+    question: "The acidic air pollutants reach the Earth’s surface because of wet deposition only.",
+    options: ["True", "False"],
+    correctAnswer: 1,
+  },
+  // Question 61
+  {
+    question: "Which of the following gases is responsible for the yellowing of the Taj Mahal?",
+    options: [
+      "Organic carbon",
+      "Black carbon",
+      "Brown carbon",
+      "All of the mentioned",
+    ],
+    correctAnswer: 3,
+  },
+  // Question 62
+  {
+    question: "What is the average concentration of ozone in the ozone layer of the atmosphere?",
+    options: [
+      "Nearly 100 %",
+      "Greater than 90 %",
+      "Between 10-50 %",
+      "Less than 10 ppm",
+    ],
+    correctAnswer: 2,
+  },
+  // Question 63
+  {
+    question: "Who discovered the ozone layer?",
+    options: [
+      "Henri Buisson & Charles Fabry",
+      "Carl Sagan & Charles Fabry",
+      "G.M.B Dobson",
+      "Carl Sagan &G.M.B Dobson",
+    ],
+    correctAnswer: 0,
+  },
+  // Question 64
+  {
+    question: "Which of the following devices can be used to measure ozone in the stratosphere from the ground?",
+    options: ["Spectrometer", "Photometer", "Spectrophotometer", "Spectro-ozonometer"],
+    correctAnswer: 2,
+  },
+  // Question 65
+  {
+    question: "The ozone layer absorbs what range of wavelengths of the sun’s radiation?",
+    options: [
+      "0.80 mm – 1.50 mm",
+      "200 nm – 315 nm",
+      "450 nm – 570 nm",
+      "660 nm – 750 nm",
+    ],
+    correctAnswer: 1,
+  },
+  // Question 66
+  {
+    question: "Who discovered the formation of ozone from photochemical reactions?",
+    options: ["G.M.B Dobson", "Sydney Chapman", "Carl Sagan", "Henri Buisson"],
+    correctAnswer: 1,
+  },
+  // Question 67
+  {
+    question: "Between what altitudes, is the ozone layer found in highest concentrations?",
+    options: ["10-20 km", "20-40 km", "40-55 km", "55-70 km"],
+    correctAnswer: 1,
+  },
+{
+    question: "Nitrogen also helps in preventing UV rays from reaching the Earth.",
+    options: ["True", "False"],
+    correctAnswer: 0, // Index of "True"
+  },
+  {
+    question: "Which of the following UV radiations is responsible for causing sunburns and skin cancer?",
+    options: ["UV-A", "UV-B", "UV-C", "All of the mentioned"],
+    correctAnswer: 1, // Index of "UV-B"
+  },
+  {
+    question: "The long UV-B radiations are important for vitamin D production of the skin.",
+    options: ["True", "False"],
+    correctAnswer: 0, // Index of "True"
+  },
+  {
+    question: "In which season is the ozone found at its maximum level in the northern hemisphere?",
+    options: ["Winter", "Summer", "Spring", "Autumn"],
+    correctAnswer: 2, // Index of "Spring"
+  },
+  {
+    question: "When was the ozone hole discovered?",
+    options: ["1974", "1984", "1994", "2004"],
+    correctAnswer: 1, // Index of "1984"
+  },
+  {
+    question: "The ozone hole is a phenomenon that has occurred in:",
+    options: ["Arctic region", "Northern temperate region", "Southern temperate region", "None of the mentioned"],
+    correctAnswer: 2, // Index of "Southern temperate region"
+  },
+  {
+    question: "Which of the following chemicals are responsible for the depletion of the stratospheric ozone layer?",
+    options: ["Refrigerants", "Propellants", "Foam-blowing agents", "All of the mentioned"],
+    correctAnswer: 3, // Index of "All of the mentioned"
+  },
+  {
+    question: "What does EESC stand for in the context of ozone-depleting compounds?",
+    options: [
+      "Equivalent Effective Stratosphere Chlorine",
+      "Equivalent Energy Saving Compounds",
+      "Energy Effective Stratospheric Compounds",
+      "None of the above"
+    ],
+    correctAnswer: 0, // Index of "Equivalent Effective Stratosphere Chlorine"
+  },
+  {
+    question: "The Montreal Protocol bans the production of which of the following chemical substances?",
+    options: [
+      "Chlorine, bromine, CFCs, freons",
+      "Carbon tetrachloride, halons, trichloroethane",
+      "CFCs, bromine, halons, freons",
+      "All of the above"
+    ],
+    correctAnswer: 3, // Index of "All of the above"
+  },
+  {
+    question: "Where was the first use of nuclear bombs which caused death to millions of lives?",
+    options: ["Karachi", "Melbourne and Sydney", "Hiroshima and Nagasaki", "Tokyo"],
+    correctAnswer: 2, // Index of "Hiroshima and Nagasaki"
+  },
+  {
+    question: "Where was the first controlled fission of an atom achieved?",
+    options: ["India", "Japan", "United States", "Russia"],
+    correctAnswer: 2, // Index of "United States"
+  },
+  {
+    question: "Which was the first country to develop atomic bombs?",
+    options: ["Russia", "Japan", "United States", "Germany"],
+    correctAnswer: 2, // Index of "United States"
+  },
+  {
+    question: "State true or false: Nuclear energy is only harmful.",
+    options: ["True", "False"],
+    correctAnswer: 1, // Index of "False"
+  },
 
 
-
-//unit 2
-
- 
+  /*unit 2*/
+  {
+    question: "What percentage of the Earth's surface is covered with water?",
+    options: ["20%", "10%", "71%", "100%"],
+    correctAnswer: 2
+  },
   {
     question: "When trees are cut, the amount of oxygen:",
     options: ["decreases", "increases", "both (a) and (b)", "remains the same"],
@@ -1194,177 +1539,720 @@ const questions = [
     options: ["The heat of the Earth's interior", "Solar energy", "Hydro energy", "Wind energy"],
     correctAnswer: 0
   },
-  //unit 3
-    
-  {
-    question: "Which one of the following is not a gaseous bio-chemical cycle in an ecosystem?",
-    options: ["Carbon Cycle", "Phosphorus Cycle", "Sulphur Cycle", "Nitrogen Cycle"],
-    correctAnswer: 1
-  },
-  {
-    question: "Transfer of energy from source of plants through a series of organisms is known as:",
-    options: ["Food web", "Energy Cycle", "Food Chain", "Biological system"],
-    correctAnswer: 2
-  },
-  {
-    question: "The type of ecosystem with the highest mean plant productivity is:",
-    options: ["Tundra", "Temperate grassland", "Desert", "Tropical Rain Forest"],
-    correctAnswer: 3
-  },
-  {
-    question: "In an ecosystem, standing crop refers to:",
-    options: [
-      "All the green plants",
-      "All non-living materials",
-      "All living and dead animals",
-      "All living materials both animals and plants"
-    ],
-    correctAnswer: 3
-  },
-  {
-    question: "An ecosystem that can be easily damaged but can recover after some time if the damaging effect stops has:",
-    options: [
-      "High Stability and High Resilience",
-      "High Stability and Low Resilience",
-      "Low Stability and Low Resilience",
-      "Low Stability and High Resilience"
-    ],
-    correctAnswer: 3
-  },
-  {
-    question: "Which ecosystem produces the highest annual net primary productivity?",
-    options: [
-      "Tropical Evergreen Forest",
-      "Tropical Rain Forest",
-      "Tropical Deciduous Forest",
-      "Temperate Evergreen Forest"
-    ],
-    correctAnswer: 1
-  },
-  {
-    question: "The term used to describe the variety of life found on Earth and all natural processes is:",
-    options: ["Biodiversity", "Ecosystem", "Biosphere", "Ecology"],
-    correctAnswer: 0
-  },
-  {
-    question: "Which of the following is not a value of biodiversity?",
-    options: ["Social Use", "Aesthetic Use", "Environmental Use", "Moral"],
-    correctAnswer: 2
-  },
-  {
-    question: "Biodiversity contained in the ecosystem that provides forest dwellers with all their daily needs is a value of:",
-    options: ["Ethical and Moral", "Consumptive", "Aesthetic", "Social"],
-    correctAnswer: 1
-  },
-  {
-    question: "The initiative of biodiversity assessment focuses on which ecosystem types?",
-    options: ["Forest", "Wetland", "Marine", "All of the above"],
-    correctAnswer: 3
-  },
-  {
-    question: "Which of the following is not a cause of biodiversity loss?",
-    options: ["Overexploitation", "Eco-friendly practices", "Co-extinction", "Habitat loss and fragmentation"],
-    correctAnswer: 1
-  },
-  {
-    question: "Marketable products such as animal skins, ivory, medicinal plants, and honey come under:",
-    options: ["Productive value", "Consumptive value", "Aesthetic value", "Social value"],
-    correctAnswer: 0
-  },
-  {
-    question: "The 'lungs of the planet' are:",
-    options: ["Sahyadri rain forest", "Konkan rain forest", "Amazon rain forest", "South Africa rain forest"],
-    correctAnswer: 2
-  },
-  {
-    question: "Which leads to over-exploitation of natural resources?",
-    options: ["Greed", "Eco-friendly practices", "Need", "All of the above"],
-    correctAnswer: 0
-  },
-  {
-    question: "Which of the following is not an important hotspot in India?",
-    options: ["Himalayas", "Western Ghats", "Indo-Burma", "Central Ghats"],
-    correctAnswer: 3
-  },
-  {
-    question: "What flows through the ecosystem while matter cycles within them?",
-    options: ["Energy", "Force", "Pressure", "Wind"],
-    correctAnswer: 0
-  },
-  {
-    question: "The process by which green plants and some organisms use sunlight to synthesize nutrients is called:",
-    options: ["Chemosynthesis", "Photosynthesis", "Food Chain", "Food Web"],
-    correctAnswer: 1
-  },
-  {
-    question: "Which type of ecosystem accounts for most of the net primary productivity on Earth even though it has low average net productivity?",
-    options: ["Tropical Rain Forest", "Desert", "Tropical Evergreen Forest", "Ocean"],
-    correctAnswer: 3
-  },
-  {
-    question: "Plants are considered producers because:",
-    options: [
-      "Plants produce their own food",
-      "Plants depend on other organisms for food",
-      "Plants are decomposers",
-      "Plants do not require energy"
-    ],
-    correctAnswer: 0
-  },
-  {
-    question: "The area to which a species is biologically adapted to live is known as:",
-    options: ["Niche", "Habitat", "Succession", "All of the above"],
-    correctAnswer: 1
-  },
-  {
-    question: "A set of organisms that resemble one another in appearance and behavior is called:",
-    options: ["Exon", "Prisons", "Species", "None of the above"],
-    correctAnswer: 2
-  },
-  {
-    question: "The destruction of habitat of plants and animals is called:",
-    options: ["Endemism", "Endangered Species", "Habitat loss", "Flood"],
-    correctAnswer: 2
-  },
-  {
-    question: "Each organism in an ecosystem is at a specific feeding stage called:",
-    options: ["Climax level", "Producer level", "Trophic level", "Consumptive level"],
-    correctAnswer: 2
-  },
-  {
-    question: "Zoos are an example of:",
-    options: ["In-situ conservation", "In-vivo conservation", "Ex-situ conservation", "Ex-vivo conservation"],
-    correctAnswer: 2
-  },
-  {
-    question: "Study of inter-relationship between organisms and their environment is called:",
-    options: ["Ecology", "Ecosystem", "Phytogeography", "Ethology"],
-    correctAnswer: 0
-  },
-  {
-    question: "How are the atmosphere, hydrosphere, and lithosphere connected?",
-    options: ["Hydrological cycle", "Nitrogen cycle", "Oxygen cycle", "Carbon cycle"],
-    correctAnswer: 0
-  },
-  {
-    question: "An ecosystem gradually merges with an adjoining one through a transitional zone called:",
-    options: ["Ecological niche", "Ecological footprint", "Ecotone", "Biodiversity loss"],
-    correctAnswer: 2
-  },
-  {
-    question: "The driving force in an ecosystem is:",
-    options: ["Plants", "Producers", "Solar energy", "Biomass energy"],
-    correctAnswer: 2
-  },
-  {
-    question: "Which of the following can be a producer in an ecosystem?",
-    options: ["Plants", "Animals", "Humans", "Fish"],
-    correctAnswer: 0
-  },
-  {
-    question: "A trophic level refers to:",
-    options: ["Area in the tropics", "An organism's position in the food chain", "An organism's position in the ecosystem", "An organism's position in a biome"],
-    correctAnswer: 1
-  }
-];
+//unit 3
 
+  {
+    question: "What percentage of the Earth's surface is covered with water?",
+    options: ["20%", "10%", "71%", "100%"],
+    correctAnswer: 2
+  },
+  {
+    question: "When trees are cut, the amount of oxygen:",
+    options: ["decreases", "increases", "both (a) and (b)", "remains the same"],
+    correctAnswer: 0
+  },
+  {
+    question: "Identify the uses of water:",
+    options: ["Domestic", "Industrial", "Agricultural", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    question: "Land covers up only what percentage of the Earth's surface?",
+    options: ["10%", "29%", "40%", "30%"],
+    correctAnswer: 1
+  },
+  {
+    question: "Which metals are used for making jewellery?",
+    options: ["Sodium, Potassium", "Zinc, Tungsten", "Iron, Copper, Aluminium", "Gold, Silver, Platinum"],
+    correctAnswer: 3
+  },
+  {
+    question: "Write an example of non-metallic minerals:",
+    options: ["Lime", "Haematite", "Cuprite", "Bauxite"],
+    correctAnswer: 0
+  },
+  {
+    question: "Energy resources derived from natural organic materials are called:",
+    options: ["Geothermal energy sources", "Fossil fuels", "Biomass", "All of the above"],
+    correctAnswer: 3
+  },
+  {
+    question: "Forest is responsible for:",
+    options: [
+      "Watershed protection",
+      "Land erosion control",
+      "Providing economic and environmental benefits",
+      "All of the above"
+    ],
+    correctAnswer: 3
+  },
+  {
+    question: "Identify the metallic minerals from the following:",
+    options: ["Haematite", "Bauxite", "Both a and b", "None"],
+    correctAnswer: 2
+  },
+  {
+    question: "A land area used as a permanent residence is called:",
+    options: ["Industrial", "Agricultural", "Residential", "Landfill"],
+    correctAnswer: 2
+  },
+  {
+    question: "Conservation of soil and water is which type of function of forest resources?",
+    options: ["Productive", "Protective", "Regulative", "None"],
+    correctAnswer: 1
+  },
+  {
+    question: "Which energy is converted into electrical energy by a solar cell?",
+    options: ["Chemical energy", "Nuclear energy", "Solar energy", "Magnetic energy"],
+    correctAnswer: 2
+  },
+  {
+    question: "Renewable sources of energy include:",
+    options: ["Coal", "Petroleum", "Plants", "Uranium"],
+    correctAnswer: 2
+  },
+  {
+    question: "What is LPG?",
+    options: [
+      "Liquefied Petroleum Gas",
+      "Loaded Petroleum Gas",
+      "Liquid Petroleum Gas",
+      "None of the above"
+    ],
+    correctAnswer: 0
+  },
+  {
+    question: "The resources which can be used again and again after passing through some processes are known as:",
+    options: ["Renewable resources", "Non-renewable resources", "Cyclic resources", "None of the above"],
+    correctAnswer: 0
+  },
+  {
+    question: "Which of the following is an example of a cyclic resource?",
+    options: ["Water", "Oil", "Coal", "None of the above"],
+    correctAnswer: 0
+  },
+  {
+    question: "The energy sources continuously replenished at a constant rate are called:",
+    options: ["New resources", "Renewable resources", "Old resources", "Non-renewable resources"],
+    correctAnswer: 1
+  },
+  {
+    question: "Tidal energy is used to rotate turbines and generate:",
+    options: ["Fuel", "Water", "Salt", "Electricity"],
+    correctAnswer: 3
+  },
+  {
+    question: "What produces benefits like flood control, irrigation, and water supply?",
+    options: ["Thermal power", "Solar energy", "Hydropower", "Wind power"],
+    correctAnswer: 2
+  },
+  {
+    question: "Geothermal energy is:",
+    options: ["The heat of the Earth's interior", "Solar energy", "Hydro energy", "Wind energy"],
+    correctAnswer: 0
+  },
+  {
+ //other
+
+        question: "Which ecosystem service provides natural pest control in agriculture?",
+        options: [
+            "Biological control",
+            "Chemical control",
+            "Physical control",
+            "Mechanical control"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "What is the main advantage of using LED lighting for energy conservation?",
+        options: [
+            "Energy efficiency",
+            "Low initial cost",
+            "Heat production",
+            "Color variety"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "Which type of pollution is measured in decibels?",
+        options: [
+            "Noise pollution",
+            "Air pollution",
+            "Water pollution",
+            "Soil pollution"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "What is the primary purpose of a wildlife corridor?",
+        options: [
+            "Allow animal migration",
+            "Prevent hunting",
+            "Increase tourism",
+            "Research purposes"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "Which farming method uses no synthetic fertilizers or pesticides?",
+        options: [
+            "Organic farming",
+            "Intensive farming",
+            "Conventional farming",
+            "Hydroponic farming"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "What is the main component of biogas?",
+        options: [
+            "Methane",
+            "Carbon dioxide",
+            "Hydrogen",
+            "Nitrogen"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "Which type of erosion is caused by wind?",
+        options: [
+            "Aeolian erosion",
+            "Fluvial erosion",
+            "Glacial erosion",
+            "Coastal erosion"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "What is the primary goal of carbon sequestration?",
+        options: [
+            "Reduce atmospheric CO2",
+            "Generate electricity",
+            "Produce biofuels",
+            "Filter air pollution"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "Which renewable resource is used in tidal energy?",
+        options: [
+            "Ocean currents",
+            "Wind",
+            "Sunlight",
+            "Biomass"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "What is the main purpose of environmental monitoring?",
+        options: [
+            "Track environmental changes",
+            "Enforce regulations",
+            "Control pollution",
+            "Protect wildlife"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "What is the process of converting sunlight into chemical energy by plants called?",
+        options: [
+            "Photosynthesis",
+            "Respiration",
+            "Transpiration",
+            "Fermentation"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "Which layer of the atmosphere contains the ozone layer?",
+        options: [
+            "Stratosphere",
+            "Troposphere",
+            "Mesosphere",
+            "Thermosphere"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "What is the primary cause of acid rain?",
+        options: [
+            "Sulfur dioxide emissions",
+            "Carbon dioxide emissions",
+            "Methane emissions",
+            "Ozone depletion"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "Which of these is a non-biodegradable pollutant?",
+        options: [
+            "Plastic",
+            "Paper",
+            "Food waste",
+            "Wood"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "What is the main purpose of a riparian buffer zone?",
+        options: [
+            "Protect water quality",
+            "Increase fish production",
+            "Generate hydropower",
+            "Control flooding"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "Which greenhouse gas is produced by rice paddies?",
+        options: [
+            "Methane",
+            "Carbon dioxide",
+            "Nitrous oxide",
+            "Water vapor"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "What is the primary function of a catalytic converter in vehicles?",
+        options: [
+            "Reduce exhaust emissions",
+            "Increase fuel efficiency",
+            "Reduce engine noise",
+            "Cool engine temperature"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "Which conservation method involves protecting entire ecosystems rather than single species?",
+        options: [
+            "Ecosystem approach",
+            "Species approach",
+            "Population approach",
+            "Habitat approach"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "What is the main advantage of using nuclear power for electricity generation?",
+        options: [
+            "Zero direct CO2 emissions",
+            "Low initial cost",
+            "Renewable fuel source",
+            "No waste production"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "Which type of renewable energy has the potential to provide baseload power?",
+        options: [
+            "Geothermal",
+            "Solar",
+            "Wind",
+            "Wave"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "Which of these is a primary producer in an ecosystem?",
+        options: [
+            "Green plants",
+            "Herbivores",
+            "Carnivores",
+            "Decomposers"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "What is the process of soil formation called?",
+        options: [
+            "Pedogenesis",
+            "Weathering",
+            "Erosion",
+            "Leaching"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "Which pollutant is responsible for the formation of photochemical smog?",
+        options: [
+            "Ground-level ozone",
+            "Carbon monoxide",
+            "Sulfur dioxide",
+            "Particulate matter"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "What is the primary cause of coral reef bleaching?",
+        options: [
+            "Increased water temperature",
+            "Ocean acidification",
+            "Overfishing",
+            "Plastic pollution"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "Which renewable energy technology has the highest energy conversion efficiency?",
+        options: [
+            "Hydroelectric power",
+            "Solar photovoltaic",
+            "Wind turbines",
+            "Biomass"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "What is the main purpose of a carbon tax?",
+        options: [
+            "Reduce greenhouse gas emissions",
+            "Generate government revenue",
+            "Promote renewable energy",
+            "Support clean technology"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "Which forest type is known as the 'rainforest of the sea'?",
+        options: [
+            "Coral reefs",
+            "Mangroves",
+            "Kelp forests",
+            "Seagrass beds"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "What is the primary function of the Clean Water Act?",
+        options: [
+            "Regulate water pollution",
+            "Provide drinking water",
+            "Control flooding",
+            "Manage irrigation"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "Which of these is a greenhouse gas not produced by human activities?",
+        options: [
+            "Water vapor",
+            "Carbon dioxide",
+            "Methane",
+            "CFCs"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "What is the main benefit of crop rotation?",
+        options: [
+            "Maintain soil fertility",
+            "Increase crop yield",
+            "Reduce water usage",
+            "Control pests"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "Which type of pollution is caused by excessive artificial lighting?",
+        options: [
+            "Light pollution",
+            "Thermal pollution",
+            "Noise pollution",
+            "Visual pollution"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "What is the primary goal of wildlife corridors?",
+        options: [
+            "Connect habitats",
+            "Protect endangered species",
+            "Prevent poaching",
+            "Promote tourism"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "Which environmental problem is caused by excess nutrients in water bodies?",
+        options: [
+            "Eutrophication",
+            "Acidification",
+            "Salinization",
+            "Sedimentation"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "What is the main advantage of vertical farming?",
+        options: [
+            "Reduced land use",
+            "Lower energy costs",
+            "Less water consumption",
+            "Higher crop yield"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "Which international agreement aims to protect wetlands?",
+        options: [
+            "Ramsar Convention",
+            "Paris Agreement",
+            "Montreal Protocol",
+            "Basel Convention"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "What is the primary cause of desertification?",
+        options: [
+            "Poor land management",
+            "Climate change",
+            "Population growth",
+            "Industrial development"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "Which type of energy storage is most environmentally friendly?",
+        options: [
+            "Pumped hydroelectric",
+            "Lithium batteries",
+            "Lead-acid batteries",
+            "Hydrogen fuel cells"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "What is the main purpose of environmental impact assessment?",
+        options: [
+            "Predict environmental effects",
+            "Calculate project costs",
+            "Determine feasibility",
+            "Plan construction"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "Which agricultural practice helps prevent soil erosion?",
+        options: [
+            "Contour plowing",
+            "Deep tilling",
+            "Monoculture",
+            "Intensive grazing"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "What is the primary function of mangrove forests?",
+        options: [
+            "Coastal protection",
+            "Carbon storage",
+            "Fish habitat",
+            "All of the above"
+        ],
+        correctAnswer: 3
+    },
+    {
+        question: "Which type of waste is most hazardous to human health?",
+        options: [
+            "Radioactive waste",
+            "Plastic waste",
+            "Organic waste",
+            "Paper waste"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "What is the main cause of groundwater depletion?",
+        options: [
+            "Over-extraction",
+            "Climate change",
+            "Pollution",
+            "Urbanization"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "Which renewable energy source is most suitable for baseload power?",
+        options: [
+            "Geothermal",
+            "Solar",
+            "Wind",
+            "Tidal"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "What is the primary purpose of a green building certification?",
+        options: [
+            "Promote sustainability",
+            "Increase property value",
+            "Reduce costs",
+            "Meet regulations"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "Which ecosystem has the highest carbon storage capacity?",
+        options: [
+            "Peatlands",
+            "Tropical forests",
+            "Grasslands",
+            "Tundra"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "What is the main benefit of organic farming?",
+        options: [
+            "Soil health improvement",
+            "Higher yields",
+            "Lower costs",
+            "Faster growth"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "Which air pollutant is the main cause of urban smog?",
+        options: [
+            "Nitrogen oxides",
+            "Sulfur dioxide",
+            "Carbon monoxide",
+            "Particulates"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "What is the primary goal of the Paris Agreement?",
+        options: [
+            "Limit global warming",
+            "Protect biodiversity",
+            "Reduce pollution",
+            "Conserve resources"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "Which method is most effective for soil conservation?",
+        options: [
+            "Terracing",
+            "Crop rotation",
+            "Cover cropping",
+            "No-till farming"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "What is the main advantage of drip irrigation?",
+        options: [
+            "Water efficiency",
+            "Cost effectiveness",
+            "Easy installation",
+            "Low maintenance"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "Which factor most affects biodiversity?",
+        options: [
+            "Habitat destruction",
+            "Climate change",
+            "Pollution",
+            "Invasive species"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "What is the primary purpose of a wildlife sanctuary?",
+        options: [
+            "Species protection",
+            "Research",
+            "Tourism",
+            "Education"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "Which renewable energy source has the least environmental impact?",
+        options: [
+            "Solar power",
+            "Wind power",
+            "Hydropower",
+            "Biomass"
+        ],
+        correctAnswer: 1
+    },
+    {
+        question: "What is the main cause of ocean acidification?",
+        options: [
+            "CO2 absorption",
+            "Plastic pollution",
+            "Oil spills",
+            "Overfishing"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "Which waste management method is most sustainable?",
+        options: [
+            "Recycling",
+            "Incineration",
+            "Landfilling",
+            "Ocean dumping"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "What is the primary function of wetlands?",
+        options: [
+            "Water purification",
+            "Flood control",
+            "Wildlife habitat",
+            "All of the above"
+        ],
+        correctAnswer: 3
+    },
+    {
+        question: "Which greenhouse gas has the highest global warming potential?",
+        options: [
+            "Sulfur hexafluoride",
+            "Methane",
+            "Carbon dioxide",
+            "Nitrous oxide"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "What is the main purpose of environmental legislation?",
+        options: [
+            "Protect environment",
+            "Generate revenue",
+            "Promote business",
+            "Create jobs"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "Which conservation strategy is most effective for endangered species?",
+        options: [ 
+            "Habitat protection",
+            "Captive breeding",
+            "Relocation",
+            "Population control"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "What is the primary cause of deforestation in tropical regions?",
+        options: [
+            "Agriculture expansion",
+            "Logging",
+            "Urbanization",
+            "Mining"
+        ],
+        correctAnswer: 0
+    },
+//other
+
+];
